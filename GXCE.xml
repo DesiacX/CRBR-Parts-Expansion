@@ -1,0 +1,23 @@
+<wiidisc version="1"> <options>
+		<section name="Ocarina">
+			<option name="Folder Replacement">
+				<choice name="Enabled">
+					<patch id="CRfolder" />
+				</choice>
+			</option>
+			<option name="Extended Codeset">
+				<choice name="Enabled">
+					<patch id="CRcodes" />
+				</choice>
+			</option>
+		</section>
+	</options>
+	<patch id="CRfolder">
+		<folder external="./GXCE" recursive="false" create="true" />
+		<folder external="./GXCE" disc="/" create="true" />	
+	</patch>
+	<patch id="CRcodes">
+		<memory valuefile="./GXCE/Codes/GXCE01.gct" offset="0x81800000" />
+		<memory offset="0x800000F0" value="02000000" original="01800000" />	
+	</patch>
+</wiidisc>

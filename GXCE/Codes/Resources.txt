@@ -1,0 +1,7 @@
+Custom Robo Parts Bytemap
+
+https://docs.google.com/spreadsheets/d/1xMTUvEPd0IhIkLBRpwaBkMJw2oo_JkgNmZ03lfrr2gE
+
+Cuustom Robo Memory Addresses / General Documentation
+
+https://docs.google.com/document/d/1tYbIL9g2PMimfyjwtZe4X87KHLt_jCH03k8ccsJKXy8

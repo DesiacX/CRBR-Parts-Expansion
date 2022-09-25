@@ -1,0 +1,1 @@
+This folder is effectively the root of the ISO. If a file with the same name exists in this folder, it will load from this folder instead. An example is provided in the Sound folder.

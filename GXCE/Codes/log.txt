@@ -1,0 +1,104 @@
+CUSTOM ROBO
+Unlock Everything [?????]
+Synchronized Spawns [DesiacX]
+Illegal Parts enabled on startup [DesiacX]
+HP Defaults to 70 for Tag Battles in V.S. Mode V2 [DesiacX]
+default non-legal stages off [DE]
+Source/Stages/StageDisablers.asm
+	Little Locomotive Train Delete [DesiacX]
+	Stage Animation Disabler for Primary 3d Models [DesiacX]
+	Stage Animation Disabler for Interactive Destructibles [DesiacX]
+	Stage Animation Disable for Shadows [DesiacX]
+	Stage Specific Disablers [DesiacX]
+	Lava / Ice / Movement Modifier Disablers [DesiacX]
+Source/Parts/PartExpansion.asm
+	Custom Parts Master Code [DesiacX]
+	Part Select Data [DesiacX]
+	Part Data Storage [DesiacX]
+	Part Name and Description Storage [DesiacX]
+	Part Model Control Data [DesiacX]
+	Part Name and Description Control V2 [DesiacX]
+	Part Model Control V2 [DesiacX]
+	Robobytes Control [DesiacX]
+	Part Expansion V2 [DesiacX]
+Source/Parts/PartData/PartList.asm
+	Source/Parts/PartData/Body/Ray 01.asm
+		Ray 01 [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Splendor.asm
+		Splendor [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Glory.asm
+		Glory [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Milky Way.asm
+		Milky Way [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Earth.asm
+		Earth [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Sol.asm
+		Sol [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Metal Ape.asm
+		Metal Ape [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Metal Bear.asm
+		Metal Bear [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Metal Ox.asm
+		Metal Ox [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Swift.asm
+		Swift [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Shrike.asm
+		Shrike [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Peregrine.asm
+		Peregrine [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Javelin.asm
+		Javelin [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Glaive.asm
+		Glaive [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Halberd.asm
+		Halberd [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Criminal.asm
+		Criminal [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Buggy.asm
+		Buggy [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Juggler.asm
+		Juggler [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Defender.asm
+		Defender [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Seeker.asm
+		Seeker [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Breaker.asm
+		Breaker [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Seal Head.asm
+		Seal Head [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Dour Head.asm
+		Dour Head [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Tank Head.asm
+		Tank Head [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Rakansen.asm
+		Rakansen [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Ruhiel.asm
+		Ruhiel [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Athena.asm
+		Athena [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Ray Legend.asm
+		Ray Legend [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Ray Warrior.asm
+		Ray Warrior [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Oil Can.asm
+		Oil Can [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Rahu I.asm
+		Rahu I [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Rahu II.asm
+		Rahu II [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Rahu III.asm
+		Rahu III [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Body/Chickenheart.asm
+		Chickenheart [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Basic Gun.asm
+		Basic Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Standard Bomb.asm
+		Standard Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Standard Pod.asm
+		Standard Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Leg/Standard Legs.asm
+		Standard Legs [Custom Robo Battle Revolution]
+Source/Parts/PartExpansionCloser.asm
+	Part Expansion Closer [DesiacX]
+Remember Parts Selection [DesiacX]
+External Codeset Closer [DesiacX]
