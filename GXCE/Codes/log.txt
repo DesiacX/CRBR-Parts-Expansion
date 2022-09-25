@@ -1,6 +1,6 @@
 CUSTOM ROBO
 Unlock Everything [?????]
-Synchronized Spawns [DesiacX]
+Cannon Manipulation Fix [DesiacX]
 Illegal Parts enabled on startup [DesiacX]
 HP Defaults to 70 for Tag Battles in V.S. Mode V2 [DesiacX]
 default non-legal stages off [DE]
