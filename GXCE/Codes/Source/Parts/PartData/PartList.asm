@@ -46,6 +46,9 @@
 .include "Source/Parts/PartData/Body/Chickenheart.asm"
 #Guns
 .include "Source/Parts/PartData/Gun/Basic Gun.asm"
+.include "Source/Parts/PartData/Gun/3-Way Gun.asm"
+.include "Source/Parts/PartData/Gun/Gatling Gun.asm"
+.include "Source/Parts/PartData/Gun/Vertical Gun.asm"
 #Bomb
 .include "Source/Parts/PartData/Bomb/Standard Bomb.asm"
 #Pods
