@@ -49,6 +49,16 @@
 .include "Source/Parts/PartData/Gun/3-Way Gun.asm"
 .include "Source/Parts/PartData/Gun/Gatling Gun.asm"
 .include "Source/Parts/PartData/Gun/Vertical Gun.asm"
+
+.include "Source/Parts/PartData/Gun/Sniper Gun.asm"
+.include "Source/Parts/PartData/Gun/Stun Gun.asm"
+.include "Source/Parts/PartData/Gun/Hornet Gun.asm"
+.include "Source/Parts/PartData/Gun/Flame Gun.asm"
+
+.include "Source/Parts/PartData/Gun/Dragon Gun.asm"
+.include "Source/Parts/PartData/Gun/Splash Gun.asm"
+.include "Source/Parts/PartData/Gun/Left Arc Gun.asm"
+.include "Source/Parts/PartData/Gun/Right Arc Gun.asm"
 #Bomb
 .include "Source/Parts/PartData/Bomb/Standard Bomb.asm"
 #Pods

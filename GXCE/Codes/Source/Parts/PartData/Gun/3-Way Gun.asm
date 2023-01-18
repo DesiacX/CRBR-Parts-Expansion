@@ -1,5 +1,5 @@
 ######################################
-Basic Gun [Custom Robo Battle Revolution]
+3-Way Gun [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x01
 .alias PartBase = 0x01
