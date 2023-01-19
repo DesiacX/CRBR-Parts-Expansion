@@ -1,0 +1,112 @@
+######################################
+Starshot Gun [Custom Robo Battle Revolution]
+######################################
+#Note: Starshot Gun's gun model releases bullets at an upwards angle.
+.alias PartType = 0x01
+.alias PartBase = 0x13
+.alias ModelID = 0x13
+    .BA<-PartName
+    .BA->$8023BCF0
+    .BA<-PartDescription
+    .BA->$8023BCF4
+    .BA<-RoboBytes
+    .BA->$8023BCF8
+    .GOTO->MASTERCODE
+PartName:
+    String|
+"Starshot Gun"
+PartDescription:
+    String|
+"Splits into five rounds as 
+it ascends. 
+Ground fire: Rounds split 
+vertically. 
+Aerial fire: Rounds split 
+horizontally. 
+Range: long. 
+Advisory: When in the air, 
+spread your fire. When on the 
+ground, fire repeatedly when 
+your opponent approaches."
+RoboBytes:
+* 00140000 00000001
+* FF80003F FFFFBEFF
+* FF80003F FFFFFFFF
+* 0000000A 00000001
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 3F800000 05010500
+* 0A140000 02002AAA
+* F3EA0000 000F0000
+* 3E6147AE 00000000
+* 00000000 3E19999A
+* 0000000F 00C8000A
+* 001E0014 00640064
+* 00230064 00020000
+* 3B03126F 3D4CCCCD
+* 3D6147AE 3E19999A
+* 0000000F 00C8000A
+* 001E0014 00640064
+* 00230064 00870000
+* 3E6147AE 3CF5C28F
+* 3BA3D70A 3E19999A
+* 0A00001E 015E000A
+* 001E002D 00640064
+* 00230064 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 05010501
+* 0A190000 02001C71
+* 0E380000 000F0000
+* 3E6147AE 00000000
+* 00000000 3DCCCCCD
+* 0000000F 00C8000A
+* 001E0014 00640064
+* 00190064 003C0000
+* 3B03126F 3E5A1CAC
+* 3E5A1CAC 3DCCCCCD
+* 0000000F 00C8000A
+* 001E0005 00640064
+* 00190064 00A60000
+* 3E6147AE 00000000
+* 3C23D70A 3DCCCCCD
+* 0F000017 00C8000A
+* 001E0000 00640064
+* 00190064 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 00000000
+* 00000000 DEADBEEF
+MASTERCODE:
+PULSE
+{
+    lis r6, 0x8023
+    ori r6, r6, 0xBC70
+    mflr r16
+    stmw r0, 0(r6)
+    li r9, PartType
+    li r10, ModelID
+    li r11, PartBase
+    lis r8, 0x8000
+    ori r8, r8, 0x48E0
+    mtctr r8
+    bctrl
+    lmw r0, 0(r6)
+    mtlr r16
+    blr
+}
+* E0000000 80008000

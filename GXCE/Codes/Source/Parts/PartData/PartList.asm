@@ -59,6 +59,22 @@
 .include "Source/Parts/PartData/Gun/Splash Gun.asm"
 .include "Source/Parts/PartData/Gun/Left Arc Gun.asm"
 .include "Source/Parts/PartData/Gun/Right Arc Gun.asm"
+
+.include "Source/Parts/PartData/Gun/Shotgun.asm"
+.include "Source/Parts/PartData/Gun/Rayfall Gun.asm"
+.include "Source/Parts/PartData/Gun/Bubble Gun.asm"
+.include "Source/Parts/PartData/Gun/Eagle Gun.asm"
+
+.include "Source/Parts/PartData/Gun/V Laser Gun.asm"
+.include "Source/Parts/PartData/Gun/Magnum Gun.asm"
+.include "Source/Parts/PartData/Gun/Needle Gun.asm"
+.include "Source/Parts/PartData/Gun/Starshot Gun.asm"
+
+.include "Source/Parts/PartData/Gun/Glider Gun.asm"
+.include "Source/Parts/PartData/Gun/Homing Star Gun.asm"
+.include "Source/Parts/PartData/Gun/Trap Gun.asm"
+.include "Source/Parts/PartData/Gun/Drill Gun.asm"
+
 #Bomb
 .include "Source/Parts/PartData/Bomb/Standard Bomb.asm"
 #Pods
