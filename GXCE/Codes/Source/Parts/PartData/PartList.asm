@@ -75,6 +75,41 @@
 .include "Source/Parts/PartData/Gun/Trap Gun.asm"
 .include "Source/Parts/PartData/Gun/Drill Gun.asm"
 
+.include "Source/Parts/PartData/Gun/Titan Gun.asm"
+.include "Source/Parts/PartData/Gun/Claw Gun.asm"
+.include "Source/Parts/PartData/Gun/Knuckle Gun.asm"
+.include "Source/Parts/PartData/Gun/Afterburner Gun.asm"
+
+.include "Source/Parts/PartData/Gun/Blade Gun.asm"
+.include "Source/Parts/PartData/Gun/Meteor Storm Gun.asm"
+.include "Source/Parts/PartData/Gun/Twin Fang Gun.asm"
+.include "Source/Parts/PartData/Gun/Gravity Gun.asm"
+
+.include "Source/Parts/PartData/Gun/Phoenix Gun.asm"
+.include "Source/Parts/PartData/Gun/Left Pulse Gun.asm"
+.include "Source/Parts/PartData/Gun/Right Pulse Gun.asm"
+.include "Source/Parts/PartData/Gun/Sword Storm Gun.asm"
+
+.include "Source/Parts/PartData/Gun/Ion Gun.asm"
+.include "Source/Parts/PartData/Gun/Flare Gun.asm"
+.include "Source/Parts/PartData/Gun/Left 5-Way Gun.asm"
+.include "Source/Parts/PartData/Gun/Right 5-Way Gun.asm"
+
+.include "Source/Parts/PartData/Gun/Halo Gun.asm"
+.include "Source/Parts/PartData/Gun/Wave Laser Gun.asm"
+.include "Source/Parts/PartData/Gun/X Laser Gun.asm"
+.include "Source/Parts/PartData/Gun/Crystal Strike Gun.asm"
+
+.include "Source/Parts/PartData/Gun/Wyrm Gun.asm"
+.include "Source/Parts/PartData/Gun/Raptor Gun.asm"
+.include "Source/Parts/PartData/Gun/Waxing Arc Gun.asm"
+.include "Source/Parts/PartData/Gun/Waning Arc Gun.asm"
+
+.include "Source/Parts/PartData/Gun/Rahu I Gun.asm"
+.include "Source/Parts/PartData/Gun/Rahu II Gun.asm"
+.include "Source/Parts/PartData/Gun/Rahu III Gun.asm"
+.include "Source/Parts/PartData/Gun/Can Gun.asm"
+
 #Bomb
 .include "Source/Parts/PartData/Bomb/Standard Bomb.asm"
 #Pods

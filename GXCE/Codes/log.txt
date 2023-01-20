@@ -138,6 +138,62 @@ Source/Parts/PartData/PartList.asm
 		Trap Gun [Custom Robo Battle Revolution]
 	Source/Parts/PartData/Gun/Drill Gun.asm
 		Drill Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Titan Gun.asm
+		Titan Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Claw Gun.asm
+		Claw Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Knuckle Gun.asm
+		Knuckle Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Afterburner Gun.asm
+		Afterburner Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Blade Gun.asm
+		Blade Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Meteor Storm Gun.asm
+		Meteor Storm Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Twin Fang Gun.asm
+		Twin Fang Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Gravity Gun.asm
+		Gravity Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Phoenix Gun.asm
+		Phoenix Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Left Pulse Gun.asm
+		Left Pulse Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Right Pulse Gun.asm
+		Right Pulse Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Sword Storm Gun.asm
+		Sword Storm Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Ion Gun.asm
+		Ion Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Flare Gun.asm
+		Flare Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Left 5-Way Gun.asm
+		Left 5-Way Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Right 5-Way Gun.asm
+		Right 5-Way Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Halo Gun.asm
+		Halo Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Wave Laser Gun.asm
+		Wave Laser Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/X Laser Gun.asm
+		X Laser Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Crystal Strike Gun.asm
+		Crystal Strike Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Wyrm Gun.asm
+		Wyrn Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Raptor Gun.asm
+		Raptor Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Waxing Arc Gun.asm
+		Waxing Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Waning Arc Gun.asm
+		Waning Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Rahu I Gun.asm
+		Basic Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Rahu II Gun.asm
+		Rahu II Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Rahu III Gun.asm
+		Rahu III Gun [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Gun/Can Gun.asm
+		Can Gun [Custom Robo Battle Revolution]
 	Source/Parts/PartData/Bomb/Standard Bomb.asm
 		Standard Bomb [Custom Robo Battle Revolution]
 	Source/Parts/PartData/Pod/Standard Pod.asm
