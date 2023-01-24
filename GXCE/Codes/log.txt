@@ -196,6 +196,86 @@ Source/Parts/PartData/PartList.asm
 		Can Gun [Custom Robo Battle Revolution]
 	Source/Parts/PartData/Bomb/Standard Bomb.asm
 		Standard Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Standard Bomb F.asm
+		Standard Bomb F [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Standard Bomb S.asm
+		Standard Bomb S [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Standard Bomb K.asm
+		Standard Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Standard Bomb X.asm
+		Standard Bomb X [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Wave Bomb.asm
+		Wave Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Left Wave Bomb.asm
+		Left Wave Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Right Wave Bomb.asm
+		Right Wave Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Straight Bomb G.asm
+		Straigh Bomb G [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Straight Bomb S.asm
+		Straight Bomb S [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Straight Bomb T.asm
+		Straight Bomb T [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Freeze Bomb.asm
+		Freeze Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Left Flank Bomb H.asm
+		Left Flank Bomb H [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Right Flank Bomb H.asm
+		Right Flank Bomb H [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Burrow Bomb D.asm
+		Burrow Bomb D [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Burrow Bomb P.asm
+		Burrow Bomb P [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Tomahawk Bomb B.asm
+		Tomahawk Bomb B [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Tomahawk Bomb G.asm
+		Tomahawk Bomb G [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Gemini Bomb B.asm
+		Gemin Bomb B [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Gemini Bomb P.asm
+		Gemini Bomb B [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Submarine Bomb D.asm
+		Submarine Bomb D [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Submarine Bomb P.asm
+		Submarine Bomb P [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Submarine Bomb K.asm
+		Submarine Bomb K [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Dual Bomb.asm
+		Dual Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Crescent Bomb P.asm
+		Crescent Bomb P [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Crescent Bomb C.asm
+		Crescent Bomb C [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Crescent Bomb K.asm
+		Crescent Bomb K [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Dual Bomb C.asm
+		Dual Bomb C [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Acrobat Bomb.asm
+		Acrobat Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Delta Bomb.asm
+		Delta Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Wall Bomb.asm
+		Wall Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Smash Bomb.asm
+		Smash Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Double Mine Bomb.asm
+		Dobule Mine Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Geo Trap Bomb.asm
+		Geo Trap Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Titan Bomb.asm
+		Titan Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Treble Bomb.asm
+		Treble Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Wyvern Bomb.asm
+		Wyvern Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Waxing Arc Bomb.asm
+		Waxing Arc Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Waning Arc Bomb.asm
+		Waning Arc Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Grand Cross Bomb.asm
+		Grand Cross Bomb [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Bomb/Can Bomb.asm
+		Can Bomb [Custom Robo Battle Revolution]
 	Source/Parts/PartData/Pod/Standard Pod.asm
 		Standard Pod [Custom Robo Battle Revolution]
 	Source/Parts/PartData/Leg/Standard Legs.asm

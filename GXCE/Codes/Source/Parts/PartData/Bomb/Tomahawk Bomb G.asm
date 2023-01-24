@@ -1,9 +1,9 @@
 ######################################
-Standard Bomb [Custom Robo Battle Revolution]
+Tomahawk Bomb G [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x02
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x0F
+.alias ModelID = 0x0F
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,39 +13,33 @@ Standard Bomb [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Bomb"
+"Tomahawk Bomb G"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight toward 
-target. 
-Launches one bomb at 
-a time. 
-Blows target back 
-diagonally. 
-Advisory: Launch as often 
-as possible so your 
-opponent cannot hide 
-behind the walls."
+"Travels in a high arc. 
+Launches one bomb at a time. 
+Blows target upward. 
+Advisory: Use it on opponents 
+who like to stay in the air."
 RoboBytes:
-* 0001005A 5A5A0000
-* 00A00000 01010010
-* 00140000 3F800000
-* 3F933333 3F170A3D
-* 00440258 00780046
-* 001E0064 00780046
+* 00010064 465A0000
+* 00780000 0101000F
+* 00120000 3F333333
+* 3F800000 404EB852
+* 003D0258 0096005A
+* 001E0064 0096005A
 * 00640000 00000000
-* 00640000 00000000
+* 01040000 00000000
 * 00000000 00000000
 * 00000000 00000000
-* 00000000 555A0000
-* 00B40000 0101000E
-* 00120000 3F733333
-* 3F8F5C29 3F170A3D
-* 003501A4 00780046
-* 001E0064 00780046
+* 00000000 645A0000
+* 00780000 0101000C
+* 00100000 3F266666
+* 3F4CCCCD 40728F5C
+* 002B01A4 0096005A
+* 001E0064 0096005A
 * 00640000 00000000
-* 00000000 00000000
+* 00640000 00000000
 * 00000000 00000000
 * 00000000 00000000
 * 00000000 00000000

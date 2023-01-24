@@ -1,9 +1,9 @@
 ######################################
-Standard Bomb [Custom Robo Battle Revolution]
+Dobule Mine Bomb [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x02
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x1C
+.alias ModelID = 0x1C
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,39 +13,38 @@ Standard Bomb [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Bomb"
+"Double Mine Bomb"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight toward 
-target. 
-Launches one bomb at 
-a time. 
-Blows target back 
-diagonally. 
-Advisory: Launch as often 
-as possible so your 
-opponent cannot hide 
-behind the walls."
+"Launches and splits to the 
+left and right sides. 
+Explodes after a short 
+period of time if it 
+lands on the ground. 
+Launches two bombs at a time. 
+Blows target diagonally 
+upward. 
+Advisory: Try to cover the 
+area near your foe in bombs."
 RoboBytes:
-* 0001005A 5A5A0000
+* 00020050 4150F000
 * 00A00000 01010010
-* 00140000 3F800000
-* 3F933333 3F170A3D
-* 00440258 00780046
+* 00140000 3F547AE1
+* 3F947AE1 3F170A3D
 * 001E0064 00780046
-* 00640000 00000000
-* 00640000 00000000
+* 001E0064 00780046
+* 00640000 FF6A0000
+* 00000000 00960000
 * 00000000 00000000
 * 00000000 00000000
-* 00000000 555A0000
+* 00000000 41507800
 * 00B40000 0101000E
-* 00120000 3F733333
-* 3F8F5C29 3F170A3D
-* 003501A4 00780046
+* 00120000 3F547AE1
+* 3F947AE1 3F170A3D
 * 001E0064 00780046
-* 00640000 00000000
-* 00000000 00000000
+* 001E0064 00780046
+* 00640000 FED40000
+* 00000000 012C0000
 * 00000000 00000000
 * 00000000 00000000
 * 00000000 00000000

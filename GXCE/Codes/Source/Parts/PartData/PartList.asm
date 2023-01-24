@@ -112,6 +112,56 @@
 
 #Bomb
 .include "Source/Parts/PartData/Bomb/Standard Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Standard Bomb F.asm"
+.include "Source/Parts/PartData/Bomb/Standard Bomb S.asm"
+.include "Source/Parts/PartData/Bomb/Standard Bomb K.asm"
+
+.include "Source/Parts/PartData/Bomb/Standard Bomb X.asm"
+.include "Source/Parts/PartData/Bomb/Wave Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Left Wave Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Right Wave Bomb.asm"
+
+.include "Source/Parts/PartData/Bomb/Straight Bomb G.asm"
+.include "Source/Parts/PartData/Bomb/Straight Bomb S.asm"
+.include "Source/Parts/PartData/Bomb/Straight Bomb T.asm"
+.include "Source/Parts/PartData/Bomb/Freeze Bomb.asm"
+
+.include "Source/Parts/PartData/Bomb/Left Flank Bomb H.asm"
+.include "Source/Parts/PartData/Bomb/Right Flank Bomb H.asm"
+.include "Source/Parts/PartData/Bomb/Burrow Bomb D.asm"
+.include "Source/Parts/PartData/Bomb/Burrow Bomb P.asm"
+
+.include "Source/Parts/PartData/Bomb/Tomahawk Bomb B.asm"
+.include "Source/Parts/PartData/Bomb/Tomahawk Bomb G.asm"
+.include "Source/Parts/PartData/Bomb/Gemini Bomb B.asm"
+.include "Source/Parts/PartData/Bomb/Gemini Bomb P.asm"
+
+.include "Source/Parts/PartData/Bomb/Submarine Bomb D.asm"
+.include "Source/Parts/PartData/Bomb/Submarine Bomb P.asm"
+.include "Source/Parts/PartData/Bomb/Submarine Bomb K.asm"
+.include "Source/Parts/PartData/Bomb/Dual Bomb.asm"
+
+.include "Source/Parts/PartData/Bomb/Crescent Bomb P.asm"
+.include "Source/Parts/PartData/Bomb/Crescent Bomb C.asm"
+.include "Source/Parts/PartData/Bomb/Crescent Bomb K.asm"
+.include "Source/Parts/PartData/Bomb/Dual Bomb C.asm"
+
+.include "Source/Parts/PartData/Bomb/Acrobat Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Delta Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Wall Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Smash Bomb.asm"
+
+.include "Source/Parts/PartData/Bomb/Double Mine Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Geo Trap Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Titan Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Treble Bomb.asm"
+
+.include "Source/Parts/PartData/Bomb/Wyvern Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Waxing Arc Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Waning Arc Bomb.asm"
+.include "Source/Parts/PartData/Bomb/Grand Cross Bomb.asm"
+
+.include "Source/Parts/PartData/Bomb/Can Bomb.asm"
 #Pods
 .include "Source/Parts/PartData/Pod/Standard Pod.asm"
 #Legs

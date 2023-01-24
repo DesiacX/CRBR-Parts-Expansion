@@ -1,9 +1,9 @@
 ######################################
-Standard Bomb [Custom Robo Battle Revolution]
+Standard Bomb F [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x02
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x01
+.alias ModelID = 0x01
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,7 +13,7 @@ Standard Bomb [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Bomb"
+"Standard Bomb F"
 PartDescription:
     String|
 "Features basic functions. 
@@ -21,8 +21,7 @@ Flies straight toward
 target. 
 Launches one bomb at 
 a time. 
-Blows target back 
-diagonally. 
+Blows target sideways. 
 Advisory: Launch as often 
 as possible so your 
 opponent cannot hide 
@@ -55,7 +54,7 @@ RoboBytes:
 * 00000000 00000000
 * 00000000 00000000
 * 00000000 00000000
-* 3F800000 DEADBEEF
+* 3F800000 00000000
 MASTERCODE:
 PULSE
 {

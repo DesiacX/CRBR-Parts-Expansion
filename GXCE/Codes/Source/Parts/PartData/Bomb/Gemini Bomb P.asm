@@ -1,9 +1,9 @@
 ######################################
-Standard Bomb [Custom Robo Battle Revolution]
+Gemini Bomb B [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x02
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x11
+.alias ModelID = 0x11
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,40 +13,39 @@ Standard Bomb [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Bomb"
+"Gemini Bomb P"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight toward 
-target. 
-Launches one bomb at 
+"Ground fire: Launches a split 
+bomb toward either side 
+of your foe. 
+Aerial fire: Launches a split 
+bomb toward the front and 
+back of your foe. 
+Can launch two bombs at 
 a time. 
-Blows target back 
-diagonally. 
-Advisory: Launch as often 
-as possible so your 
-opponent cannot hide 
-behind the walls."
+Blast lingers for a while. 
+Blows target sideways."
 RoboBytes:
-* 0001005A 5A5A0000
-* 00A00000 01010010
-* 00140000 3F800000
-* 3F933333 3F170A3D
-* 00440258 00780046
-* 001E0064 00780046
+* 00020028 693C0000
+* 00A00000 0101000F
+* 003C0000 3E800000
+* 3ECCCCCD 40F6147B
+* 0028012C 0096005A
+* 00140064 0096005A
+* 00640000 FF380000
+* 003CFFE2 00C80000
+* 003C001E 00000000
+* 00000000 00000000
+* 00000000 643C0000
+* 00B40000 0101000C
+* 00370000 3E6B851F
+* 3EC28F5C 411051EC
+* 002800D2 0096005A
+* 00140064 0096005A
+* 00640000 0000FF10
+* 003C0000 000000C8
 * 00640000 00000000
-* 00640000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 555A0000
-* 00B40000 0101000E
-* 00120000 3F733333
-* 3F8F5C29 3F170A3D
-* 003501A4 00780046
-* 001E0064 00780046
-* 00640000 00000000
-* 00000000 00000000
-* 00000000 00000000
 * 00000000 00000000
 * 00000000 00000000
 * FFFFFFFF FFFFFFFF

@@ -1,9 +1,9 @@
 ######################################
-Standard Bomb [Custom Robo Battle Revolution]
+Crescent Bomb K [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x02
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x22
+.alias ModelID = 0x22
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,39 +13,35 @@ Standard Bomb [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Bomb"
+"Crescent Bomb K"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight toward 
-target. 
-Launches one bomb at 
-a time. 
-Blows target back 
-diagonally. 
-Advisory: Launch as often 
-as possible so your 
-opponent cannot hide 
-behind the walls."
+"Arcs slowly toward target. 
+Launches one bomb at a time. 
+Always knocks target down on 
+impact. 
+Advisory: Launch frequently 
+to prevent your opponent 
+from jumping."
 RoboBytes:
-* 0001005A 5A5A0000
-* 00A00000 01010010
-* 00140000 3F800000
-* 3F933333 3F170A3D
-* 00440258 00780046
+* 00010064 785A0000
+* 003C0000 0101000C
+* 003C0000 3F570A3D
+* 3F9C28F6 3F0CCCCD
+* 004507D0 00780046
 * 001E0064 00780046
 * 00640000 00000000
 * 00640000 00000000
 * 00000000 00000000
 * 00000000 00000000
-* 00000000 555A0000
-* 00B40000 0101000E
-* 00120000 3F733333
-* 3F8F5C29 3F170A3D
-* 003501A4 00780046
+* 00000000 465A0000
+* 00C80000 0101000A
+* 003C0000 3F570A3D
+* 3F83D70A 3F0CCCCD
+* 003607D0 00780046
 * 001E0064 00780046
 * 00640000 00000000
-* 00000000 00000000
+* 001E0000 00000000
 * 00000000 00000000
 * 00000000 00000000
 * 00000000 00000000

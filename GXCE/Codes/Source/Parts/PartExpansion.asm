@@ -1460,7 +1460,7 @@ HOOK @ $80005fBC
     li r4, 0x4994
     mullw r4, r22, r4        
     add r7, r4, r7        #Get specific Player Location
-    lbz r7, 0x485A (r7)    #Load Bomb Physical Slot ID
+    lbz r7, 0x485B (r7)    #Load Bomb Physical Slot ID
     lis r22, LocLow
     ori r22, r22, DataLocBombHigh
     lwz r22, 0 (r22)

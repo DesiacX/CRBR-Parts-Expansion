@@ -1,9 +1,9 @@
 ######################################
-Standard Bomb [Custom Robo Battle Revolution]
+Wall Bomb [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x02
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x1A
+.alias ModelID = 0x1A
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,35 +13,30 @@ Standard Bomb [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Bomb"
+"Wall Bomb"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight toward 
-target. 
-Launches one bomb at 
-a time. 
-Blows target back 
-diagonally. 
-Advisory: Launch as often 
-as possible so your 
-opponent cannot hide 
-behind the walls."
+"Detonates a huge explosion 
+in front of you. 
+Launches one bomb at a time. 
+Blows target diagonally upward. 
+Advisory: Fire away from your 
+foe to block their way."
 RoboBytes:
-* 0001005A 5A5A0000
-* 00A00000 01010010
-* 00140000 3F800000
-* 3F933333 3F170A3D
-* 00440258 00780046
+* 0001000A 3C500000
+* 00F00000 0101000F
+* 003C0000 3F800000
+* 3F800000 40800000
+* 004B0258 00780046
 * 001E0064 00780046
 * 00640000 00000000
-* 00640000 00000000
 * 00000000 00000000
 * 00000000 00000000
-* 00000000 555A0000
-* 00B40000 0101000E
-* 00120000 3F733333
-* 3F8F5C29 3F170A3D
+* 00000000 00000000
+* 00000000 3C500000
+* 00C80000 0101000F
+* 003C0000 3F800000
+* 3F800000 40800000
 * 003501A4 00780046
 * 001E0064 00780046
 * 00640000 00000000
