@@ -219,3 +219,26 @@
 .include "Source/Parts/PartData/Pod/Can Pod.asm"
 #Legs
 .include "Source/Parts/PartData/Leg/Standard Legs.asm"
+.include "Source/Parts/PartData/Leg/High Jump Legs.asm"
+.include "Source/Parts/PartData/Leg/Ground Legs.asm"
+.include "Source/Parts/PartData/Leg/Formula Legs.asm"
+
+.include "Source/Parts/PartData/Leg/Stabilizer Legs.asm"
+.include "Source/Parts/PartData/Leg/Short Thrust Legs.asm"
+.include "Source/Parts/PartData/Leg/Long Thrust Legs.asm"
+.include "Source/Parts/PartData/Leg/Quick Jump Legs.asm"
+
+.include "Source/Parts/PartData/Leg/Feather Legs.asm"
+.include "Source/Parts/PartData/Leg/Wide Jump Legs.asm"
+.include "Source/Parts/PartData/Leg/Booster Legs.asm"
+.include "Source/Parts/PartData/Leg/Can Legs.asm"
+
+.include "Source/Parts/PartData/Leg/Swallow Legs.asm"
+.include "Source/Parts/PartData/Leg/Raven Legs.asm"
+.include "Source/Parts/PartData/Leg/Eclipse Legs.asm"
+.include "Source/Parts/PartData/Leg/Ultimate Legs.asm"
+
+.include "Source/Parts/PartData/Leg/Plus One Legs C.asm"
+.include "Source/Parts/PartData/Leg/Plus One Legs S.asm"
+.include "Source/Parts/PartData/Leg/Plus One Legs U.asm"
+

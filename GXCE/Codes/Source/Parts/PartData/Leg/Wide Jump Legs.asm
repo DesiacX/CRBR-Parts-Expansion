@@ -1,9 +1,9 @@
 ######################################
-Standard Legs [Custom Robo Battle Revolution]
+Wide Jump Legs [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x04
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x09
+.alias ModelID = 0x09
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,18 +13,18 @@ Standard Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Legs"
+"Wide Jump Legs"
 PartDescription:
     String|
-"Basic set of legs. 
-Features no special 
-characteristics. 
-Possesses no ascent or 
-descent augmentation. 
-Replace as soon as possible 
-with a different set of legs."
+"Makes long jumps possible. 
+Features no descent 
+augmentation. 
+Advisory: Use this set of 
+legs to move around in 
+midair without using a dash 
+or continuous jump."
 RoboBytes:
-* 00646464 64640164
+* 00646464 6464C864
 * 64646464 646464FF
 MASTERCODE:
 PULSE

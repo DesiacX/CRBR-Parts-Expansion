@@ -1,8 +1,8 @@
 ######################################
-Standard Legs [Custom Robo Battle Revolution]
+Plus One Legs S [CRBR Parts Expansion, de;, DesiacX]
 ######################################
 .alias PartType = 0x04
-.alias PartBase = 0x00
+.alias PartBase = 0x10
 .alias ModelID = 0x00
     .BA<-PartName
     .BA->$8023BCF0
@@ -13,19 +13,18 @@ Standard Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Legs"
+"Plus One Legs S"
 PartDescription:
     String|
-"Basic set of legs. 
-Features no special 
+"A variant of the Standard
+Legs that adds an extra jump.
+Features no other special 
 characteristics. 
 Possesses no ascent or 
-descent augmentation. 
-Replace as soon as possible 
-with a different set of legs."
+descent augmentation."
 RoboBytes:
 * 00646464 64640164
-* 64646464 646464FF
+* 64646464 64646400
 MASTERCODE:
 PULSE
 {

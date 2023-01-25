@@ -1,9 +1,9 @@
 ######################################
-Standard Legs [Custom Robo Battle Revolution]
+Eclipse Legs [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x04
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x0E
+.alias ModelID = 0x0E
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,18 +13,15 @@ Standard Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Legs"
+"Eclipse Legs^"
 PartDescription:
     String|
-"Basic set of legs. 
-Features no special 
-characteristics. 
-Possesses no ascent or 
-descent augmentation. 
-Replace as soon as possible 
-with a different set of legs."
+"Illegal part. 
+Enables sharp turning in 
+the air. 
+Increases jump height."
 RoboBytes:
-* 00646464 64640164
+* 01646464 C801C8C8
 * 64646464 646464FF
 MASTERCODE:
 PULSE

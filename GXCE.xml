@@ -17,7 +17,7 @@
 		<folder external="./GXCE" disc="/" create="true" />	
 	</patch>
 	<patch id="CRcodes">
-		<memory valuefile="./GXCE/Codes/GXCE01.gct" offset="0x81800000" />
+		<memory valuefile="./GXCE/Codes/GXCE01.GCT" offset="0x81800000" />
 		<memory offset="0x800000F0" value="02000000" original="01800000" />	
 	</patch>
 </wiidisc>

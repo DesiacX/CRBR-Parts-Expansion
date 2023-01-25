@@ -2597,3 +2597,25 @@ HOOK @ $80107290
 {
 %SetPartLoc(r9, PodPartLoc)
 }
+
+###########################
+Plus One Legs on Leg Base ID 0x10 [de;, DesiacX]
+###########################
+HOOK @ $80005F54
+{
+add r4, r23, r24    #Add Player ID Times 10 to Player Parts Location and store it in r4
+lbz r4, 0xB (r4)    #Load the Players Leg Data
+cmpwi r4, 0x10      #Check if its Leg 0x10 (Adjustment Leg 1)
+bne END
+
+lbz r4, -0xD4 (r6)
+addi r7, r4, 0x1
+stb r7, -0xD4 (r6)	#Load Dash Count Byte, Add 0x1 to it, and store it.
+
+lbz r4, -0xDB (r6)
+addi r7, r4, 0x1
+stb r7, -0xDB (r6)	#Load Dash Count Byte, Add 0x1 to it, and store it.
+
+END:
+lwz r6, -0x5078 (r13)    #Code Overwritten at Injection point
+}

@@ -1,9 +1,9 @@
 ######################################
-Standard Legs [Custom Robo Battle Revolution]
+Quick Jump Legs [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x04
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x07
+.alias ModelID = 0x07
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,19 +13,18 @@ Standard Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Legs"
+"Quick Jump Legs"
 PartDescription:
     String|
-"Basic set of legs. 
-Features no special 
-characteristics. 
-Possesses no ascent or 
-descent augmentation. 
-Replace as soon as possible 
-with a different set of legs."
+"Augments descent abilities. 
+Makes you less vulnerable 
+to attacks when landing. 
+Advisory: Use this set of 
+legs when you don't want to 
+stay in the air for long."
 RoboBytes:
 * 00646464 64640164
-* 64646464 646464FF
+* 32C86432 646464FF
 MASTERCODE:
 PULSE
 {

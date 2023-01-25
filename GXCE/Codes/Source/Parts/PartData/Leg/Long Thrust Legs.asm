@@ -1,9 +1,9 @@
 ######################################
-Standard Legs [Custom Robo Battle Revolution]
+Long Thrust Legs [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x04
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x06
+.alias ModelID = 0x06
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,19 +13,19 @@ Standard Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Legs"
+"Long Thrust Legs"
 PartDescription:
     String|
-"Basic set of legs. 
-Features no special 
-characteristics. 
-Possesses no ascent or 
-descent augmentation. 
-Replace as soon as possible 
-with a different set of legs."
+"Increases your dash distance. 
+Features no descent 
+augmentation. 
+Advisory: Use this set of 
+legs to drastically change 
+the ground distance between 
+you and your opponent. "
 RoboBytes:
 * 00646464 64640164
-* 64646464 646464FF
+* 64646464 C8C864FF
 MASTERCODE:
 PULSE
 {

@@ -1,9 +1,9 @@
 ######################################
-Standard Legs [Custom Robo Battle Revolution]
+Feather Legs [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x04
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x08
+.alias ModelID = 0x08
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,19 +13,20 @@ Standard Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Legs"
+"Feather Legs"
 PartDescription:
     String|
-"Basic set of legs. 
-Features no special 
-characteristics. 
-Possesses no ascent or 
-descent augmentation. 
-Replace as soon as possible 
-with a different set of legs."
+"Decreases jump speed. 
+Makes you less vulnerable 
+to attacks when landing. 
+Also helps to make sharp 
+turns on the ground. 
+Advisory: Use this set of 
+legs when you want to spend 
+a lot of time in the air."
 RoboBytes:
-* 00646464 64640164
-* 64646464 646464FF
+* 00649664 64640164
+* 01016432 646464FF
 MASTERCODE:
 PULSE
 {
