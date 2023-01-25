@@ -1,9 +1,9 @@
 ######################################
-Standard Pod [Custom Robo Battle Revolution]
+Titan Pod [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x03
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x22
+.alias ModelID = 0x22
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,30 +13,29 @@ Standard Pod [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Pod"
+"Titan Pod"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight in the 
-direction it is deployed. 
-Can deploy two pods at a time. 
-Blows target diagonally 
-upward. 
-Advisory: Fire one to the left 
-and one to the right to trap 
-your opponent."
+"Moves slowly and emits an 
+enormous blast. 
+Deploys one pod at a time. 
+Blows target diagonally high 
+into the air. 
+Advisory: Don't worry about 
+your opponent's position 
+and deploy frequently."
 RoboBytes:
-* 00020100 00000064
-* 0064005A 00000000
+* 00010100 00000064
+* 0064003C 00000000
 * 00000000 010A1E00
-* 005A0087 000A000A
+* 00280028 000A000A
 * 005A00FA 00000000
 * 00050064 0032000A
-* 00320064 01010009
-* 00200000 3F4CCCCD
-* 3F666666 3F170A3D
-* 0026012C 00640032
-* 00140064 00640032
+* 003200FA 010100B4
+* 00B40000 4019999A
+* 3DCCCCCD 3F170A3D
+* 000807D0 00C80032
+* 00140064 00C80032
 * 00640000 00000000
 * FFFFFFFF FFFFFFFF
 * FFFFFFFF FFFFFFFF

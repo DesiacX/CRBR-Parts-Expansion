@@ -1,9 +1,9 @@
 ######################################
-Standard Pod [Custom Robo Battle Revolution]
+Feint Pod G [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x03
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x0E
+.alias ModelID = 0x0E
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,30 +13,28 @@ Standard Pod [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Pod"
+"Feint Pod G"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight in the 
-direction it is deployed. 
-Can deploy two pods at a time. 
-Blows target diagonally 
-upward. 
-Advisory: Fire one to the left 
-and one to the right to trap 
-your opponent."
+"Stops in front of its target. 
+Can deploy two pods at one 
+time. 
+Blows target upward. 
+Advisory: Scatter pods left 
+and right to block your 
+opponent's way."
 RoboBytes:
 * 00020100 00000064
-* 0064005A 00000000
-* 00000000 010A1E00
-* 005A0087 000A000A
-* 005A00FA 00000000
+* 012C005A 00000000
+* 00000000 011E0000
+* 00A00000 000A000A
+* 005A00FF 00140000
 * 00050064 0032000A
-* 00320064 01010009
-* 00200000 3F4CCCCD
-* 3F666666 3F170A3D
-* 0026012C 00640032
-* 00140064 00640032
+* 00320064 01010005
+* 00130000 3F000000
+* 3F11EB85 4095C28F
+* 0016012C 0096005A
+* 00140064 0096005A
 * 00640000 00000000
 * FFFFFFFF FFFFFFFF
 * FFFFFFFF FFFFFFFF

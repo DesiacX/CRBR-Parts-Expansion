@@ -1,9 +1,9 @@
 ######################################
-Standard Pod [Custom Robo Battle Revolution]
+Ground Freeze Pod [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x03
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x0C
+.alias ModelID = 0x0C
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,31 +13,31 @@ Standard Pod [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Pod"
+"Ground Freeze Pod"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight in the 
-direction it is deployed. 
-Can deploy two pods at a time. 
-Blows target diagonally 
-upward. 
-Advisory: Fire one to the left 
-and one to the right to trap 
-your opponent."
+"Remains on the ground when 
+deployed, then homes in 
+when a target approaches. 
+Can deploy two pods at one 
+time. 
+Briefly immobilizes target. 
+Advisory: Use it in the 
+area around you to prevent 
+foes from approaching."
 RoboBytes:
 * 00020100 00000064
-* 0064005A 00000000
-* 00000000 010A1E00
-* 005A0087 000A000A
-* 005A00FA 00000000
-* 00050064 0032000A
+* 0064017C 00000000
+* 00000000 011E0500
+* 000500C8 000A000A
+* 005A012C 00050000
+* 00000064 000A000A
 * 00320064 01010009
-* 00200000 3F4CCCCD
-* 3F666666 3F170A3D
-* 0026012C 00640032
-* 00140064 00640032
-* 00640000 00000000
+* 00200000 3F800000
+* 3F933333 3F2E147B
+* 0008012C 00000000
+* 005A0000 00000000
+* 00000000 00000000
 * FFFFFFFF FFFFFFFF
 * FFFFFFFF FFFFFFFF
 * 0000003C 00000001

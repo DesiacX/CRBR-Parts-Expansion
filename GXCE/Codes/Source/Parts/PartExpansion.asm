@@ -1488,7 +1488,7 @@ HOOK @ $80006000
     li r3, 0x4994
     mullw r3, r3, r22        
     add r4, r3, r4        #Get specific Player Location
-    lbz r4, 0x485C (r4)    #Load Pod Physical Slot ID
+    lbz r4, 0x485D (r4)    #Load Pod Physical Slot ID
     lis r22, LocLow
     ori r22, r22, DataLocPodHigh
     lwz r22, 0 (r22)
@@ -1509,7 +1509,7 @@ HOOK @ $8000604C
     li r3, 0x4994
     mullw r3, r3, r22        
     add r4, r3, r4        #Get specific Player Location
-    lbz r4, 0x485E (r4)    #Load Pod Physical Slot ID
+    lbz r4, 0x485F (r4)    #Load Pod Physical Slot ID
     lis r22, LocLow
     ori r22, r22, DataLocLegHigh
     lwz r22, 0 (r22)

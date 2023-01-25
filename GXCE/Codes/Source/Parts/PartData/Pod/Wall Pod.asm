@@ -1,9 +1,9 @@
 ######################################
-Standard Pod [Custom Robo Battle Revolution]
+Wall Pod [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x03
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x18
+.alias ModelID = 0x18
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,30 +13,30 @@ Standard Pod [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Pod"
+"Wall Pod"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight in the 
-direction it is deployed. 
-Can deploy two pods at a time. 
+"Deploys three horizontal 
+blasts in front of you. 
+Can deploy three pods 
+at one time. 
 Blows target diagonally 
 upward. 
-Advisory: Fire one to the left 
-and one to the right to trap 
-your opponent."
+Advisory: Aim it straight 
+at your opponents when 
+they charge."
 RoboBytes:
-* 00020100 00000064
-* 0064005A 00000000
-* 00000000 010A1E00
-* 005A0087 000A000A
-* 005A00FA 00000000
-* 00050064 0032000A
-* 00320064 01010009
-* 00200000 3F4CCCCD
-* 3F666666 3F170A3D
-* 0026012C 00640032
-* 00140064 00640032
+* 00010300 0019003C
+* 012C000F 00000000
+* 00000000 010A0A00
+* 00050005 000A000A
+* 00000000 00000000
+* FFE200E9 00E9000F
+* 000F0064 0101000A
+* 00460000 3EE66666
+* 3F1EB852 40647AE1
+* 0025012C 00960005
+* 00140064 00960005
 * 00640000 00000000
 * FFFFFFFF FFFFFFFF
 * FFFFFFFF FFFFFFFF

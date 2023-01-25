@@ -278,6 +278,92 @@ Source/Parts/PartData/PartList.asm
 		Can Bomb [Custom Robo Battle Revolution]
 	Source/Parts/PartData/Pod/Standard Pod.asm
 		Standard Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Standard Pod F.asm
+		Standard Pod F [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Seeker Pod F.asm
+		Seeker Pod F [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Seeker Pod G.asm
+		Seeker Pod G [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Speed Pod D.asm
+		Speed Pod D [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Speed Pod P.asm
+		Speed Pod P[Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Cockroach Pod G.asm
+		Cockroach Pod G [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Cockroach Pod H.asm
+		Cockroach Pod H [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Dolphin Pod.asm
+		Dolphin Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Dolphin Pod G.asm
+		Dolphin Pod G [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Spider Pod.asm
+		Spider Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Spider Pod G.asm
+		Spider Pod G [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Sky Freeze Pod.asm
+		Sky Freeze Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Ground Freeze Pod.asm
+		Ground Freeze Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Feint Pod F.asm
+		Feint Pod F [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Feint Pod G.asm
+		Feint Pod G [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Jumping Pod B.asm
+		Jumping Pod B [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Jumping Pod G.asm
+		Jumping Pod G [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Float Pod F.asm
+		^Float Pod F [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Diving Pod.asm
+		Diving Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Satellite Pod.asm
+		Satellite Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Satellite Pod H.asm
+		Satellite Pod H [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Wave Pod.asm
+		Wave Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Double Wave Pod.asm
+		^Double Wave Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Beast Pod F.asm
+		Beast Pod F [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Caboose Pod C.asm
+		Caboose Pod C [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Caboose Pod T.asm
+		Caboose Pod T [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Caboose Pod X.asm
+		Caboose Pod X [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Trio Pod H.asm
+		Trio Pod H [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Wall Pod.asm
+		Wall Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Reflection Pod.asm
+		Reflection Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Umbrella Pod.asm
+		Umbrella Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Twin Flank Pod F.asm
+		Twin Flank Pod F [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Twin Flank Pod G.asm
+		Twin Flank Pod G [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Throwing Pod D.asm
+		Throwing Pod D [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Throwing Pod P.asm
+		Throwing Pod P [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Titan Pod.asm
+		Titan Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Cheetah Pod.asm
+		Cheetah Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Wolf Spider Pod.asm
+		Wolf Spider Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Orca Pod.asm
+		Orca Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Penumbra I.asm
+		Penumbra I Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Penumbra II.asm
+		Penumbra II Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Penumbra III.asm
+		Penumbra III Pod [Custom Robo Battle Revolution]
+	Source/Parts/PartData/Pod/Can Pod.asm
+		Can Pod [Custom Robo Battle Revolution]
 	Source/Parts/PartData/Leg/Standard Legs.asm
 		Standard Legs [Custom Robo Battle Revolution]
 Source/Parts/PartExpansionCloser.asm

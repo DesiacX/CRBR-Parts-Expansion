@@ -1,9 +1,9 @@
 ######################################
-Standard Pod [Custom Robo Battle Revolution]
+Diving Pod [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x03
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x12
+.alias ModelID = 0x12
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,29 +13,28 @@ Standard Pod [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Pod"
+"Diving Pod"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight in the 
-direction it is deployed. 
-Can deploy two pods at a time. 
-Blows target diagonally 
-upward. 
-Advisory: Fire one to the left 
-and one to the right to trap 
-your opponent."
+"Flies in the air, homes in 
+on a target, then descends 
+in front of it. 
+Can deploy two pods at one 
+time. 
+Blows target diagonally upward. 
+Advisory: Use it against foes 
+who like to hide behind walls."
 RoboBytes:
 * 00020100 00000064
-* 0064005A 00000000
-* 00000000 010A1E00
-* 005A0087 000A000A
-* 005A00FA 00000000
+* 007800C8 00000000
+* 00000000 010D1400
+* 0064001E 008C000A
+* 005A012C 0005003C
 * 00050064 0032000A
 * 00320064 01010009
 * 00200000 3F4CCCCD
 * 3F666666 3F170A3D
-* 0026012C 00640032
+* 001A012C 00640032
 * 00140064 00640032
 * 00640000 00000000
 * FFFFFFFF FFFFFFFF

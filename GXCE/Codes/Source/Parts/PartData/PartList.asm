@@ -164,5 +164,58 @@
 .include "Source/Parts/PartData/Bomb/Can Bomb.asm"
 #Pods
 .include "Source/Parts/PartData/Pod/Standard Pod.asm"
+.include "Source/Parts/PartData/Pod/Standard Pod F.asm"
+.include "Source/Parts/PartData/Pod/Seeker Pod F.asm"
+.include "Source/Parts/PartData/Pod/Seeker Pod G.asm"
+
+.include "Source/Parts/PartData/Pod/Speed Pod D.asm"
+.include "Source/Parts/PartData/Pod/Speed Pod P.asm"
+.include "Source/Parts/PartData/Pod/Cockroach Pod G.asm"
+.include "Source/Parts/PartData/Pod/Cockroach Pod H.asm"
+
+.include "Source/Parts/PartData/Pod/Dolphin Pod.asm"
+.include "Source/Parts/PartData/Pod/Dolphin Pod G.asm"
+.include "Source/Parts/PartData/Pod/Spider Pod.asm"
+.include "Source/Parts/PartData/Pod/Spider Pod G.asm"
+
+.include "Source/Parts/PartData/Pod/Sky Freeze Pod.asm"
+.include "Source/Parts/PartData/Pod/Ground Freeze Pod.asm"
+.include "Source/Parts/PartData/Pod/Feint Pod F.asm"
+.include "Source/Parts/PartData/Pod/Feint Pod G.asm"
+
+.include "Source/Parts/PartData/Pod/Jumping Pod B.asm"
+.include "Source/Parts/PartData/Pod/Jumping Pod G.asm"
+.include "Source/Parts/PartData/Pod/Float Pod F.asm"
+.include "Source/Parts/PartData/Pod/Diving Pod.asm"
+
+.include "Source/Parts/PartData/Pod/Satellite Pod.asm"
+.include "Source/Parts/PartData/Pod/Satellite Pod H.asm"
+.include "Source/Parts/PartData/Pod/Wave Pod.asm"
+.include "Source/Parts/PartData/Pod/Double Wave Pod.asm"
+
+.include "Source/Parts/PartData/Pod/Beast Pod F.asm"
+.include "Source/Parts/PartData/Pod/Caboose Pod C.asm"
+.include "Source/Parts/PartData/Pod/Caboose Pod T.asm"
+.include "Source/Parts/PartData/Pod/Caboose Pod X.asm"
+
+.include "Source/Parts/PartData/Pod/Trio Pod H.asm"
+.include "Source/Parts/PartData/Pod/Wall Pod.asm"
+.include "Source/Parts/PartData/Pod/Reflection Pod.asm"
+.include "Source/Parts/PartData/Pod/Umbrella Pod.asm"
+
+.include "Source/Parts/PartData/Pod/Twin Flank Pod F.asm"
+.include "Source/Parts/PartData/Pod/Twin Flank Pod G.asm"
+.include "Source/Parts/PartData/Pod/Throwing Pod D.asm"
+.include "Source/Parts/PartData/Pod/Throwing Pod P.asm"
+
+.include "Source/Parts/PartData/Pod/Titan Pod.asm"
+.include "Source/Parts/PartData/Pod/Cheetah Pod.asm"
+.include "Source/Parts/PartData/Pod/Wolf Spider Pod.asm"
+.include "Source/Parts/PartData/Pod/Orca Pod.asm"
+
+.include "Source/Parts/PartData/Pod/Penumbra I.asm"
+.include "Source/Parts/PartData/Pod/Penumbra II.asm"
+.include "Source/Parts/PartData/Pod/Penumbra III.asm"
+.include "Source/Parts/PartData/Pod/Can Pod.asm"
 #Legs
 .include "Source/Parts/PartData/Leg/Standard Legs.asm"

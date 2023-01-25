@@ -1,9 +1,9 @@
 ######################################
-Standard Pod [Custom Robo Battle Revolution]
+Penumbra III Pod [Custom Robo Battle Revolution]
 ######################################
 .alias PartType = 0x03
-.alias PartBase = 0x00
-.alias ModelID = 0x00
+.alias PartBase = 0x2B
+.alias ModelID = 0x2B
     .BA<-PartName
     .BA->$8023BCF0
     .BA<-PartDescription
@@ -13,30 +13,29 @@ Standard Pod [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Pod"
+"Penumbra III^"
 PartDescription:
     String|
-"Features basic functions. 
-Flies straight in the 
-direction it is deployed. 
-Can deploy two pods at a time. 
-Blows target diagonally 
-upward. 
-Advisory: Fire one to the left 
-and one to the right to trap 
-your opponent."
+"A pod that was merged with 
+an unknown living being. 
+A Penumbra ll with 
+upgraded firepower, faster 
+speed, and more rounds. 
+Can deploy three pods at 
+one time. 
+Blows target upward."
 RoboBytes:
-* 00020100 00000064
-* 0064005A 00000000
-* 00000000 010A1E00
-* 005A0087 000A000A
-* 005A00FA 00000000
-* 00050064 0032000A
-* 00320064 01010009
-* 00200000 3F4CCCCD
-* 3F666666 3F170A3D
-* 0026012C 00640032
-* 00140064 00640032
+* 01030100 00000046
+* 012C01E0 00000000
+* 00000000 011E1E00
+* 0046003C 00000000
+* 005A012C 00050000
+* 00050064 0064000A
+* 001E0064 01010005
+* 00130000 3F800000
+* 3F99999A 405C28F6
+* 0024012C 0096005A
+* 00140064 0096005A
 * 00640000 00000000
 * FFFFFFFF FFFFFFFF
 * FFFFFFFF FFFFFFFF
