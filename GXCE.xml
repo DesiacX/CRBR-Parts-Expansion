@@ -1,10 +1,16 @@
 <wiidisc version="1"> <options>
 		<section name="Ocarina">
-			<option name="Folder Replacement">
+			<option name="Music / SFX Replacement">
+				<choice name="Enabled">
+					<patch id="CRmusic" />
+				</choice>
+			</option>
+			<option name="Disc File Replacement / Addition">
 				<choice name="Enabled">
 					<patch id="CRfolder" />
 				</choice>
 			</option>
+
 			<option name="Extended Codeset">
 				<choice name="Enabled">
 					<patch id="CRcodes" />
@@ -12,6 +18,9 @@
 			</option>
 		</section>
 	</options>
+	<patch id="CRmusic">
+		<folder external="./GXCE/sound" disc="/sound" recursive="false"/>	
+	</patch>
 	<patch id="CRfolder">
 		<folder external="./GXCE" recursive="false" create="true" />
 		<folder external="./GXCE" disc="/" create="true" />	

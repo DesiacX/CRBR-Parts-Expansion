@@ -1234,7 +1234,6 @@ END:
 #r8 is Selected Slot. If 3D5 we are on Main Menu. Otherwise, Submenu.
 #r29 is final result. It gets moved into r31, then r31 gets moved into r3
 #r3, r30, r29 are Free due to the above
-
 HOOK @ $80066E34
 {
     cmpwi r8, 0x3D5
@@ -1282,6 +1281,8 @@ End:
     #r29, r0, r29 Original Op
 }
 
+op li r0, 0 @ $800F9700 #Forces Description Updates
+op nop @ $800F972C  #Forces Description Updates
 ############################
 Part Model Control V2 [DesiacX]
 ############################
@@ -1356,11 +1357,185 @@ OtherModels:
 }
 
 ###########################
-Robobytes Control [DesiacX]
+Illegal Byte Control V3 [DesiacX]
 ###########################
-#r19 is menu type. 0xf means main menu. 0x0 means scrollers. 0x1 means selection. When in Selection mode, use r26 for Physical Slot.
+#r19 is menu type. 0xf means main menu. 0x0 means selections. 0x1 is for the Scroller. When in Selection mode, use r26 for Physical Slot.
 #r7 is destination for Illegal / Can
 #Scroller Goes first, than slot 1/2/3
+.alias LocLow = 0x8023
+.alias DataLocBodyHigh = 0xBD68
+.alias DataLocGunHigh = DataLocBodyHigh + 4
+.alias DataLocBombHigh = DataLocGunHigh + 4
+.alias DataLocPodHigh = DataLocBombHigh + 4
+.alias DataLocLegHigh = DataLocPodHigh + 4
+######
+#BODY#
+######
+HOOK @ $800667B0
+{
+PartSelection:
+    cmpwi r19, 0x0
+    bne- MainMenu
+    lis r7, LocLow
+    ori r7, r7, DataLocBodyHigh
+    lwz r7, 0 (r7)
+    mulli r26, r26, 0x4
+    lwzx r7, r26, r7
+    b- Load
+MainMenu:
+    cmpwi r19, 0x1
+    beq- Scroller
+    lbz r7, 0x4857 (r21)    #Obtain Part Slot
+    mulli r0, r7, 0x4       #Obtain Offset
+    lis r7, LocLow
+    ori r7, r7, DataLocBodyHigh 
+    lwz r7, 0 (r7)
+    add r7, r0, r7          #Combin Offset and Base Address
+    lwz r7, 0 (r7)
+    b- Load
+Scroller:
+    li r0, 0x0
+    b- %END%
+Load:
+    lbz r0, 0x05 (r7)
+}
+op b 0x0C @ $800667A4
+
+#####
+#GUN#
+#####
+HOOK @ $800667D8
+{
+PartSelection:
+    cmpwi r19, 0x0
+    bne- MainMenu
+    lis r7, LocLow
+    ori r7, r7, DataLocGunHigh
+    lwz r7, 0 (r7)
+    mulli r26, r26, 0x4
+    lwzx r7, r26, r7
+    b- Load
+MainMenu:
+    cmpwi r19, 0x1
+    beq- Scroller
+    lbz r7, 0x4859 (r21)    #Obtain Part Slot
+    mulli r0, r7, 0x4       #Obtain Offset
+    lis r7, LocLow
+    ori r7, r7, DataLocGunHigh 
+    lwz r7, 0 (r7)
+    add r7, r0, r7          #Combin Offset and Base Address
+    lwz r7, 0 (r7)
+    b- Load
+Scroller:
+    li r0, 0x0
+    b- %END%
+Load:
+    lbz r0, 0x0 (r7)
+}
+op b 0x0C @ $800667CC
+
+######
+#BOMB#
+######
+HOOK @ $80066800
+{
+PartSelection:
+    cmpwi r19, 0x0
+    bne- MainMenu
+    lis r7, LocLow
+    ori r7, r7, DataLocBombHigh
+    lwz r7, 0 (r7)
+    mulli r26, r26, 0x4
+    lwzx r7, r26, r7
+    b- Load
+MainMenu:
+    cmpwi r19, 0x1
+    beq- Scroller
+    lbz r7, 0x485B (r21)    #Obtain Part Slot
+    mulli r0, r7, 0x4       #Obtain Offset
+    lis r7, LocLow
+    ori r7, r7, DataLocBombHigh 
+    lwz r7, 0 (r7)
+    add r7, r0, r7          #Combin Offset and Base Address
+    lwz r7, 0 (r7)
+    b- Load
+Scroller:
+    li r0, 0x0
+    b- %END%
+Load:
+    lbz r0, 0x00 (r7)
+}
+op b 0x0C @ $800667F4
+
+#####
+#POD#
+#####
+HOOK @ $80066828
+{
+PartSelection:
+    cmpwi r19, 0x0
+    bne- MainMenu
+    lis r7, LocLow
+    ori r7, r7, DataLocPodHigh
+    lwz r7, 0 (r7)
+    mulli r26, r26, 0x4
+    lwzx r7, r26, r7
+    b- Load
+MainMenu:
+    cmpwi r19, 0x1
+    beq- Scroller
+    lbz r7, 0x485D (r21)    #Obtain Part Slot
+    mulli r0, r7, 0x4       #Obtain Offset
+    lis r7, LocLow
+    ori r7, r7, DataLocPodHigh 
+    lwz r7, 0 (r7)
+    add r7, r0, r7          #Combin Offset and Base Address
+    lwz r7, 0 (r7)
+    b- Load
+Scroller:
+    li r0, 0x0
+    b- %END%
+Load:
+    lbz r0, 0x00 (r7)
+}
+op b 0x0C @ $8006681C
+
+#####
+#LEG#
+#####
+HOOK @ $80066850
+{
+PartSelection:
+    cmpwi r19, 0x0
+    bne- MainMenu
+    lis r7, LocLow
+    ori r7, r7, DataLocLegHigh
+    lwz r7, 0 (r7)
+    mulli r26, r26, 0x4
+    lwzx r7, r26, r7
+    b- Load
+MainMenu:
+    cmpwi r19, 0x1
+    beq- Scroller
+    lbz r7, 0x485F (r21)    #Obtain Part Slot
+    mulli r0, r7, 0x4       #Obtain Offset
+    lis r7, LocLow
+    ori r7, r7, DataLocLegHigh 
+    lwz r7, 0 (r7)
+    add r7, r0, r7          #Combin Offset and Base Address
+    lwz r7, 0 (r7)
+    b- Load
+Scroller:
+    li r0, 0x0
+    b- %END%
+Load:
+    lbz r0, 0x00 (r7)
+}
+op b 0x0C @ $80066844
+
+###########################
+Robobytes Control [DesiacX]
+###########################
 .alias LocLow = 0x8023
 .alias DataLocBodyHigh = 0xBD68
 .alias DataLocGunHigh = DataLocBodyHigh + 4
@@ -1370,34 +1545,6 @@ Robobytes Control [DesiacX]
 * 061C0A88 0000000A
 * 00FF00FF 00FF00FF
 * 00FF00FF 00FF00FF
-HOOK @ $800667B0
-{
-Submenu:
-    cmpwi r19, 0x0
-    bne- Information 
-    lis r7, LocLow
-    ori r7, r7, DataLocBodyHigh
-    lwz r7, 0 (r7)
-    mulli r26, r26, 0x4
-    lwzx r7, r26, r7
-    b Load
-Information:
-    lwz r7, 0x1C (r1)
-    lbz r7, 0x4863 (r7)
-    mulli r0, r7, 0x3
-    lwz r7, 0x1C (r1)
-    lbz r7, 0x4860 (r7)
-    add r7, r0, r7
-    mulli r0, r7, 0x4
-    lis r7, LocLow
-    ori r7, r7, DataLocBodyHigh
-    lwz r7, 0 (r7)
-    lwzx r7, r0, r7
-Load:
-    lbz r0, 0x05 (r7)
-}
-op b 0x0C @ $800667A4
-
 #Data Data Copy
 #r0 = Ammount of Data to Copy
 #r4 = Copy Clobbering Register
@@ -2618,4 +2765,36 @@ stb r7, -0xDB (r6)	#Load Dash Count Byte, Add 0x1 to it, and store it.
 
 END:
 lwz r6, -0x5078 (r13)    #Code Overwritten at Injection point
+}
+
+####################################################
+Replace "^`" in names with Illegal Symbol [DesiacX]
+####################################################
+HOOK @ $800F8D24
+{
+    lbzx r0, r29, r31
+Check1:
+    cmpwi r0, 0x5E
+    bne- Check2
+    li r0, 0x81
+    stbx r0, r29, r31
+Check2:
+    cmpwi r0, 0x60
+    bne- %END%
+    li r0, 0x8F
+    stbx r0, r29, r31
+}
+HOOK @ $800F9A60
+{
+    lbzx r0, r17, r27
+Check1:
+    cmpwi r0, 0x5E
+    bne- Check2
+    li r0, 0x81
+    stbx r0, r17, r27
+Check2:
+    cmpwi r0, 0x60
+    bne- %END%
+    li r0, 0x8F
+    stbx r0, r17, r27
 }

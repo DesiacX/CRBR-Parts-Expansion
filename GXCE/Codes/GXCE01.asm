@@ -61,39 +61,48 @@ HOOK @ $8010B204
   li r7, 0x46 #Default Health
 }
 
-##################################
-default non-legal stages off [DE:]
-##################################
-* 0623CF00 00000025
-* 00011C11 050F0E03
-* 131B1D0C 10142726
-* 0802120D 1523091F
-* 17041E16 22242021
-* 18191A25 28000000
+############################################
+Stagelist Toggle (Tournamnet / Vanilla) [DE, DesiacX]
+############################################
+#Default / Tournament Stagelist.
+byte [37]|
+0x00, 0x01, 0x1C, 0x11, 0x05, 0x0F, |
+0x0E, 0x03, 0x13, 0x1B, 0x1D, 0x0C, |
+0x10, 0x14, 0x27, 0x26, 0x08, 0x02, |
+0x12, 0x0D, 0x15, 0x23, 0x09, 0x1F, |
+0x17, 0x04, 0x1E, 0x16, 0x22, 0x24, |
+0x20, 0x21, 0x18, 0x19, 0x1A, 0x25, |
+0x28 |
+@ $8023CF00
+
+#Vanilla Stagelist Option
 * 2823F0E8 00000156
-* 0623CF00 00000025
-* 000F0126 08020E11
-* 120D1523 05091C03
-* 131F1417 0C10041E
-* 16222420 2118191A
-* 1B1D2527 28000000
+byte [37]|
+0x00, 0x0F, 0x01, 0x26, 0x08, 0x02, |
+0x0E, 0x11, 0x12, 0x0D, 0x15, 0x23, |
+0x05, 0x09, 0x1C, 0x03, 0x13, 0x1F, |
+0x14, 0x17, 0x0C, 0x10, 0x04, 0x1E, |
+0x16, 0x22, 0x24, 0x20, 0x21, 0x18, |
+0x19, 0x1A, 0x1B, 0x1D, 0x25, 0x27, |
+0x28 |
+@ $8023CF00
 * E0000000 80008000
-* 06aa28ca 0000000f
-* 496c6c65 67616c20
-* 53746167 65730000
-* 06aa29f0 0000003b
-* 696c6c65 67616c20
-* 73746167 65732077
-* 696c6c0a 616c736f
-* 20617070 65617220
-* 696e0a73 74616765
-* 2073656c 6563742e
-* 20202020 20202020
-* 20200000 00000000
+
+string "Stage Hazards" @ $80AA28CA
+string|
+"If off, a tournament
+style stagelist will
+be used. When on, 
+the original stagelist
+will be used." @ $80AA29DC
 
 .include Source/Stages/StageDisablers.asm
 .include Source/Parts/PartExpansion.asm
-.include Source/Parts/PartData/PartList.asm
+
+.include Source/Parts/PartData/CRBR/PartList.asm
+.include Source/Parts/PartData/Custom/PartList.asm
+#.include Source/Parts/PartData/TE4/PartList.asm
+
 .include Source/Parts/PartExpansionCloser.asm
 
 ##################################
