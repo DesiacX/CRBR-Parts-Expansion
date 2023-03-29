@@ -44,7 +44,7 @@ External Codeset [DesiacX]
 E0000000 80008000
 
 3. In config, go to Advanced and enable "enable Emulated Memory Size Override", then set it to 32mb.
-4. Right Click your copy of Custom Robo and click "Start with Riivolution Patches".  Enable "External Codeset". 
+4. Right Click your copy of Custom Robo and click "Start with Riivolution Patches" and open GXCE.xml. Enable "External Codeset". 
 5. Save the Riivolution Preset where ever you store your games.
 6. Start the game using the saved Riivolution preset .
 7. (Netplay) Right click the saved Riivolution preset and click "Start Netplay". All player must have all of the same files and the same Riivolution configuration.
