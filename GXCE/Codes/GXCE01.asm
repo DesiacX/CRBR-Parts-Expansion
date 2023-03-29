@@ -61,9 +61,9 @@ HOOK @ $8010B204
   li r7, 0x46 #Default Health
 }
 
-############################################
+######################################################
 Stagelist Toggle (Tournamnet / Vanilla) [DE, DesiacX]
-############################################
+######################################################
 #Default / Tournament Stagelist.
 byte [37]|
 0x00, 0x01, 0x1C, 0x11, 0x05, 0x0F, |
@@ -114,10 +114,12 @@ op nop @ $80109CD4
 op nop @ $80109DC0
 op nop @ $80109E68
 
-#Put this code at the end of the Codeset file that gets loaded in by Riivolution. This moves the Code Handler from the Riivolution Codes back to the Dolphin codes. Must be the last code.
+#V2. This code checks if the memory has been expanded via Riivolution. If it has, it returns the codeset handler to Dolphin's codeset handler.
 #################################
-External Codeset Closer [DesiacX]
+External Codeset Closer V2 [DesiacX]
 #################################
+* 220000F0 01800000
 * 80000000 80001858
 * 8A00040F 00001848
 * 64000000 00000000
+* E0000000 80008000

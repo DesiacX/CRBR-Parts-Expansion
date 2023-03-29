@@ -1,6 +1,6 @@
 All included codes are creditted in the title where possible.
 
-Info for codemgr / Ocarina Cheat Code Manager can be found in the "About" tab in the program.
+The Custom Robo Netplay Discord. The framework for editing parts and various documentation was provided by members of this community.
 
 GCTRealMate was created by DukeItOut and distributed in the mod Project+ for Super Smash Brothers Brawl. 
 
