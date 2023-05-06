@@ -4,6 +4,9 @@ Synchronized Spawns V2 [DesiacX]
 Illegal Parts enabled on startup [DesiacX]
 HP Defaults to 70 for Tag Battles in V.S. Mode V2 [DesiacX]
 Stagelist Toggle (Tournamnet / Vanilla) [DE, DesiacX]
+Source/Extras/ZAltStages.asm
+	Stage Striking [DesiacX]
+	Z-Alt Stages [DesiacX]
 Source/Stages/StageDisablers.asm
 	Little Locomotive Train Delete [DesiacX]
 	Stage Animation Disabler for Primary 3d Models [DesiacX]
@@ -410,4 +413,4 @@ Source/Parts/PartData/Custom/PartList.asm
 Source/Parts/PartExpansionCloser.asm
 	Part Expansion Closer [DesiacX]
 Remember Parts Selection [DesiacX]
-External Codeset Closer [DesiacX]
+External Codeset Closer V2 [DesiacX]

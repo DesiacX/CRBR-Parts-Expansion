@@ -96,6 +96,7 @@ be used. When on,
 the original stagelist
 will be used." @ $80AA29DC
 
+.include Source/Extras/ZAltStages.asm
 .include Source/Stages/StageDisablers.asm
 .include Source/Parts/PartExpansion.asm
 

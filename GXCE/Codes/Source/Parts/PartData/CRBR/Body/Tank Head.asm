@@ -27,37 +27,95 @@ Collision: Pounces from high
 in the air. 
 Able to clear walls."
 RoboBytes:
-* 04B05A6E 5000C036
-* 263F3F23 64646464
-* 03060B03 050A0102
-* 00260078 00C60200
-* 00112142 004B0096
-* 00C6000A 00140028
-* 001E0032 003C006C
-* 00B4015E 006400C8
-* 0190007E 0107018A
-* 0004000C 00180082
-* 0087008C 006900D2
-* 01A4000A 00140024
-* 001E003C 006C0030
-* 002D0037 00280000
-* 83718362 83768376
-* 838C8358 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 02000087 00500050
-* 003C000A 0014001E
-* 00E10099 0014003A
-* FFDAFFA6 00500019
-* FFE78354 837D815B
-* 835C838B 83678251
-* 00000000 00000000
-* 00000000 00000000
-* 00000A00 00870050
-* 00500000 00140014
-* 00140000 0078008C
-* 0000FFB0 FFB00050
-* 0019FFE7 00000000
+half[1] |
+1200, #Down
+byte[22] |
+90, | #Defense
+110, | #Knockback
+80, | #Hitstun
+0, | #Illegal Toggle
+192, | #Time Spent Down without Mashing
+54, | #Time Spent Down with Mashing
+38, | #Damage taken from guns when downed
+63, | #Damage taken from bombs when downed
+63, | #Damage taken from pods when downed
+35, | #Damage taken from charges when downed
+100, | #Gun Damage
+100, | #Bomb Damage
+100, | #Pod Damage
+100, | #Gun Endlag
+3, 6, 11, | #Reduced, Unmodified, and Boosted Air Dash Startup
+3, 5, 10, | #Reduced, Unmodified, and Boosted Dash Landing Lag
+1, | #Air Dash Type(00 = Normal Air Dash, 01 = Continuous Jump, 02 = LS)
+2    #Number of Continuous Jumps
+half[3] |
+38, 120, 198  #Reduced, Unmodified, and Boosted Continuous Jump Height
+byte[6] |
+2, | #Number of Air Dashes
+0, | #SV Air Dash Toggle
+0, | #Air Dash Angle
+17, 33, 66    #Reduced, Unmodified, and Boosted Air Dash Length
+half [38] |
+75, 150, 198, | #Reduced, Unmodified, and Boosted Air Dash Speed
+10, 20, 40, | #Reduced, Unmodified, and Boosted LS Dash Turning
+30, 50, 60, | #Reduced, Unmodified, and Boosted Run Speed
+108, 180, 350, | #Reduced, Unmodified, and Boosted Ground Acceleration
+100, 200, 400, | #Reduced, Unmodified, and Boosted Ground Turning
+126, 263, 394, | #Reduced, Unmodified, and Boosted Jump Height
+4, 12, 24, | #Reduced, Unmodified, and Boosted Jump Speed
+130, 135, 140, | #Reduced, Unmodified, and Boosted Lateral Air Speed
+105, 210, 420, | #Reduced, Unmodified, and Boosted Air Acceleration
+10, 20, 36, | #Reduced, Unmodified, and Boosted Landing Lag
+30, 60, 108, | #Reduced, Unmodified, and Boosted Gravity
+48, | #Collision Box Size Related
+45, | #Collision Box Size Related
+55, | #????
+40, | #Hurtbox Size
+0 #????
+word [8] |
+0x83718362, 0x83768376, 0x838C8358, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000 #Charge Title
+byte [2] |
+2, |    #Invulnerability
+0       #Invisibility
+half [16] |
+135, |  #Charge Damage
+80, |  #Knockback Velocity
+80, |   #Knockback Angle
+60, |   #Homing
+10, |   #Startup Phase Duration (+3 for # of Frames)
+20, |   #Attack Phase Duration (+1 for # of Frames)
+30, |   #Recovery Phase Duration
+225, |   #Startup Phase Speed
+153, |  #Attack Phase Speed
+20, |   #Recovery Phase Speed
+58, |    #Startup Phase Angle
+-38, |    #Attack Phase Angle
+-90, |  #Recovery Phase Angle
+80, |   #Hitbox Size Related
+25, |   #Hitbox Size Related
+-25       #Hitbox Size Related
+word [8] |
+0x8354837D, 0x815B835C, 0x838B8367, 0x82510000, 0x00000000, 0x00000000, 0x00000000, 0x00000000 #Unused Charge Title
+byte [2] |
+10, |    #Invulnerability
+0       #Invisibility
+half [16] |
+135, |  #Charge Damage
+80, |  #Knockback Velocity
+80, |   #Knockback Angle
+0, |   #Homing
+20, |   #Startup Phase Duration (+3 for # of Frames)
+20, |   #Attack Phase Duration (+1 for # of Frames)
+20, |   #Recovery Phase Duration
+0, |   #Startup Phase Speed
+120, |  #Attack Phase Speed
+140, |   #Recovery Phase Speed
+0, |    #Startup Phase Angle
+-80, |    #Attack Phase Angle
+-80, |  #Recovery Phase Angle
+80, |   #Hitbox Size Related
+25, |   #Hitbox Size Related
+-25       #Hitbox Size Related
 MASTERCODE:
 PULSE
 {
