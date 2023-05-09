@@ -1,6 +1,6 @@
 
 ########################
-Stage Striking [DesiacX]
+Stage Striking v1.1 [DesiacX]
 ########################
 HOOK @ $80111AD8
 # U = 1, D = 4
@@ -9,26 +9,40 @@ HOOK @ $80111AD8
   lis r27, 0x8031
   ori r27, r27, 0xFED8  #Inputs
   lwz r28, 0x1C (r27)
-  rlwinm r28, r28, 0, 27, 31
+  rlwinm r26, r28, 12, 27, 31 #Check for R-Input
+  rlwinm r28, r28, 0, 27, 31  #Check for D-Pad Inputs
 BanStage:
   cmpwi r28, 1
   bne UnbanStage
   lis r28, 0x8041
   ori r28, r28, 0xA24B
-  lbz r29, 0 (r28)
+  lbz r29, 0 (r28)  #Load Selected Stage Slot
   addi r28, r28, 0x8B
   li r30, 0
   stbx r30, r29, r28
-  b END
+  cmpwi r26, 0x1  #Check for Multi-Ban
+  bne END
+BanLoop:
+  addi r29, r29, 0x1
+  stbx r30, r29, r28
+  cmpwi r29. 0x23
+  bne BanLoop
 UnbanStage:
   cmpwi r28, 4
-  bne END
+  bne %END%
   lis r28, 0x8041
   ori r28, r28, 0xA24B
   lbz r29, 0 (r28)
   addi r28, r28, 0x8B
   li r30, 1
   stbx r30, r29, r28
+  cmpwi r26, 0x1  #Check for Multi-UnBan
+  bne END
+BanLoop:
+  addi r29, r29, 0x1
+  stbx r30, r29, r28
+  cmpwi r29. 0x23
+  bne BanLoop
 END:
 }
 

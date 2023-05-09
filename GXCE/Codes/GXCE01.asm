@@ -61,6 +61,43 @@ HOOK @ $8010B204
   li r7, 0x46 #Default Health
 }
 
+###################################
+Universal Settings Modifier v1 [DesiacX]
+###################################
+word 900 @ $801C6C00  #Damage Multiplier
+float 2 @ $801C6C04 #Gravity / Jump Related
+float 6 @ $801C6C08 #Gravity / Jump Related
+half [27]|
+40, | #Gravity while shooting
+60, | #Invulnerability Frames after Down
+4,  | #Locked Bomb Aim Time
+175,| #Bomb Marker Movement Speed
+10, | #Locked / Slide Frames after Pod Shot
+250,| #Lava Bounce Height
+50, | #Lava Downtime Frames
+100,| #Lava Damage
+100,| #Friction
+100,| #Friction after Air Dash
+100,| #Movement Acceleration
+0x32, | #????
+0x46, | #????
+0x55, | #????
+0x46, | #????
+0x46, | #????
+0x5A, | #????
+0x23, | #Ice Stage Related
+10, | #Ice Friction 
+100,| #Maximum Ice Speed
+30, | #Tag from Down related
+90, | #Tag Rebirth Invulnerability
+0x0A, | #????
+0x3C, | #???? 
+0x0A, | #????
+150,  | #Health Regen Cap
+420   | #Tag Cooldown Frames
+@ $801C6C0C
+
+
 ######################################################
 Stagelist Toggle (Tournamnet / Vanilla) [DE, DesiacX]
 ######################################################

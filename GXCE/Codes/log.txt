@@ -3,9 +3,10 @@ Unlock Everything [?????]
 Synchronized Spawns V2 [DesiacX]
 Illegal Parts enabled on startup [DesiacX]
 HP Defaults to 70 for Tag Battles in V.S. Mode V2 [DesiacX]
+Universal Settings Modifier v1 [DesiacX]
 Stagelist Toggle (Tournamnet / Vanilla) [DE, DesiacX]
 Source/Extras/ZAltStages.asm
-	Stage Striking [DesiacX]
+	Stage Striking v1.1 [DesiacX]
 	Z-Alt Stages [DesiacX]
 Source/Stages/StageDisablers.asm
 	Little Locomotive Train Delete [DesiacX]
