@@ -64,7 +64,7 @@ HOOK @ $8010B204
 ###################################
 Universal Settings Modifier v1 [DesiacX]
 ###################################
-word 900 @ $801C6C00  #Damage Multiplier
+half 900 @ $801C6C00  #Damage Multiplier
 float 2 @ $801C6C04 #Gravity / Jump Related
 float 6 @ $801C6C08 #Gravity / Jump Related
 half [27]|
@@ -96,6 +96,7 @@ half [27]|
 150,  | #Health Regen Cap
 420   | #Tag Cooldown Frames
 @ $801C6C0C
+
 
 
 ######################################################
