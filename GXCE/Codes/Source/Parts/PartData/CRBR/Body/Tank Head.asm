@@ -13,7 +13,7 @@ Tank Head [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Tank Head"
+"Tank Head (CRBR)"
 PartDescription:
     String|
 "A Funky Big Head model. 
@@ -116,6 +116,10 @@ half [16] |
 80, |   #Hitbox Size Related
 25, |   #Hitbox Size Related
 -25       #Hitbox Size Related
+ExtraBytes:
+byte [5] 7, 8, 3, 10, 8   #Stat Line
+byte [1] 3  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

@@ -13,7 +13,7 @@ Metal Ox [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Metal Ox"
+"Metal Ox (CRBR)"
 PartDescription:
     String|
 "A Metal Grappler model. 
@@ -115,6 +115,10 @@ half [16] |
 60, |   #Hitbox Size Related
 0, |   #Hitbox Size Related
 -40       #Hitbox Size Related
+ExtraBytes:
+byte [5] 10, 7, 2, 3, 8   #Stat Line
+byte [1] 2  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

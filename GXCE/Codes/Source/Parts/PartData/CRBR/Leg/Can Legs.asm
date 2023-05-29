@@ -13,7 +13,7 @@ Can Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Can Legs"
+"Can Legs (CRBR)"
 PartDescription:
     String|
 "The weakest leg part. 
@@ -21,6 +21,9 @@ Weakens all abilities."
 RoboBytes:
 * 005A645A 5A5A015A
 * 5A5A5A5A 5A5A5AFF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

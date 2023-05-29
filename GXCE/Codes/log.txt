@@ -1,10 +1,17 @@
 CUSTOM ROBO
-Unlock Everything [?????]
-Synchronized Spawns V2 [DesiacX]
-Illegal Parts enabled on startup [DesiacX]
-HP Defaults to 70 for Tag Battles in V.S. Mode V2 [DesiacX]
 Universal Settings Modifier v1 [DesiacX]
 Stagelist Toggle (Tournamnet / Vanilla) [DE, DesiacX]
+Unlock Everything [?????]
+Illegal Parts enabled on startup [DesiacX]
+Boot to Main Menu v1.1 [DesiacX]
+Synchronized Spawns V2 [DesiacX]
+HP Defaults to 70 for Tag Battles in V.S. Mode V2 [DesiacX]
+Temporarily Disable Illegal Parts by holding R [DesiacX]
+Remember Parts Selection [DesiacX]
+Default Color is Original [DesiacX]
+Extra Bytes - Body Type [DesiacX]
+Extra Bytes - Build Title [DesiacX]
+Extra Bytes - Stat Lines [DesiacX]
 Source/Extras/ZAltStages.asm
 	Stage Striking v1.1 [DesiacX]
 	Z-Alt Stages [DesiacX]
@@ -405,6 +412,8 @@ Source/Parts/PartData/CRBR/PartList.asm
 	Source/Parts/PartData/CRBR/Leg/Ultimate Legs.asm
 		Ultimate Legs [Custom Robo Battle Revolution]
 Source/Parts/PartData/Custom/PartList.asm
+	Source/Parts/PartData/Custom/Body/Swift DX.asm
+		Swift DX [DesiacX]
 	Source/Parts/PartData/Custom/Leg/Plus One Legs C.asm
 		Plus One Legs C [CRBR Parts Expansion, de, DesiacX]
 	Source/Parts/PartData/Custom/Leg/Plus One Legs S.asm
@@ -413,5 +422,4 @@ Source/Parts/PartData/Custom/PartList.asm
 		Plus One Legs U [CRBR Parts Expansion, de, DesiacX]
 Source/Parts/PartExpansionCloser.asm
 	Part Expansion Closer [DesiacX]
-Remember Parts Selection [DesiacX]
 External Codeset Closer V2 [DesiacX]

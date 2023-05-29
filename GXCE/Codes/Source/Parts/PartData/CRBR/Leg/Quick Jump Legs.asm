@@ -13,7 +13,7 @@ Quick Jump Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Quick Jump Legs"
+"Quick Jump Legs (CRBR)"
 PartDescription:
     String|
 "Augments descent abilities. 
@@ -25,6 +25,9 @@ stay in the air for long."
 RoboBytes:
 * 00646464 64640164
 * 32C86432 646464FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

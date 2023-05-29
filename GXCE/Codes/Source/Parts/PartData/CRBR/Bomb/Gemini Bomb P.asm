@@ -13,7 +13,7 @@ Gemini Bomb B [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Gemini Bomb P"
+"Gemini Bomb P (CRBR)"
 PartDescription:
     String|
 "Ground fire: Launches a split 
@@ -55,6 +55,9 @@ RoboBytes:
 * 00000000 00000000
 * 00000000 00000000
 * 3F800000 DEADBEEF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

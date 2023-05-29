@@ -13,7 +13,7 @@ Formula Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Formula Legs"
+"Formula Legs (CRBR)"
 PartDescription:
     String|
 "Increases running speed, 
@@ -26,6 +26,9 @@ you and your opponent."
 RoboBytes:
 * 00C8641E 64640164
 * 64646464 646464FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

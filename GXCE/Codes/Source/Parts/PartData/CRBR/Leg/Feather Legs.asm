@@ -13,7 +13,7 @@ Feather Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Feather Legs"
+"Feather Legs (CRBR)"
 PartDescription:
     String|
 "Decreases jump speed. 
@@ -27,6 +27,9 @@ a lot of time in the air."
 RoboBytes:
 * 00649664 64640164
 * 01016432 646464FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

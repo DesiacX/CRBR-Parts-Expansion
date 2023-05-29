@@ -13,7 +13,7 @@ Ground Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Ground Legs"
+"Ground Legs (CRBR)"
 PartDescription:
     String|
 "Decreases jump interval. 
@@ -26,6 +26,9 @@ while making short jumps."
 RoboBytes:
 * 00649664 32C80196
 * 01646401 646464FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

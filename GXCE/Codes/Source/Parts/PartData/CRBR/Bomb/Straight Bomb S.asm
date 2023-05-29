@@ -13,7 +13,7 @@ Straight Bomb S [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Straight Bomb S"
+"Straight Bomb S (CRBR)"
 PartDescription:
     String|
 "Flies quickly straight 
@@ -53,6 +53,9 @@ RoboBytes:
 * 00000000 00000000
 * 00000000 00000000
 * 3F800000 DEADBEEF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

@@ -13,7 +13,7 @@ Juggler [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Juggler"
+"Juggler (CRBR)"
 PartDescription:
     String|
 "A Trick Flyer model. 
@@ -115,6 +115,10 @@ half [16] |
 50, |   #Hitbox Size Related
 0, |   #Hitbox Size Related
 0       #Hitbox Size Related
+ExtraBytes:
+byte [5] 5, 4, 3, 9, 5   #Stat Line
+byte [1] 3  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

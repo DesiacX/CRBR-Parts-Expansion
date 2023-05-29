@@ -1,8 +1,8 @@
 ######################################
-Swift [Custom Robo Battle Revolution]
+Swift DX [DesiacX]
 ######################################
 .alias PartType = 0x00
-.alias PartBase = 0x09
+.alias PartBase = 0x07
 .alias ModelID = 0x09
     .BA<-PartName
     .BA->$8023BCF0
@@ -13,21 +13,21 @@ Swift [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Switft (CRBR)"
+"Switft DX (DXE)"
 PartDescription:
     String|
-"A Little Raider model. 
-Extremely agile while on 
-the ground. 
-Poor defense allows foes 
-to knock it down easily. 
-Can jump up to three times. 
-Collision: Charges toward its 
-opponent with a short jump. 
-Able to clear walls."
+"An experimental custom part.
+A variant of the Swift model 
+that adopts elements of the 
+Metal Bear model, at the cost
+of taking more damage.
+Can jump up to three times.
+Collision: Charges straight
+toward its foe and attacks. 
+Extremely strong offensively."
 RoboBytes:
 half[1] |
-200, #Down
+400, #Down
 byte[22] |
 125, | #Defense
 120, | #Knockback
@@ -35,10 +35,10 @@ byte[22] |
 0, | #Illegal Toggle
 150, | #Time Spent Down without Mashing
 34, | #Time Spent Down with Mashing
-50, | #Damage taken from guns when downed
-60, | #Damage taken from bombs when downed
-60, | #Damage taken from pods when downed
-50, | #Damage taken from charges when downed
+60, | #Damage taken from guns when downed
+70, | #Damage taken from bombs when downed
+70, | #Damage taken from pods when downed
+60, | #Damage taken from charges when downed
 95, | #Gun Damage
 95, | #Bomb Damage
 95, | #Pod Damage
@@ -72,53 +72,53 @@ half [38] |
 18, | #Hurtbox Size
 0 #????
 word [8] |
-0x82BF82D1, 0x8E7193AA, 0x93CB82AB, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000 #Charge Title
+0x835E8362, 0x834E838B, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000 #Charge Title
 byte [2] |
 2, |    #Invulnerability
 0       #Invisibility
 half [16] |
-90, |  #Charge Damage
-120, |  #Knockback Velocity
-110, |   #Knockback Angle
-10, |   #Homing
-10, |   #Startup Phase Duration (+3 for # of Frames)
-24, |   #Attack Phase Duration (+1 for # of Frames)
-30, |   #Recovery Phase Duration
-223, |   #Startup Phase Speed
-146, |  #Attack Phase Speed
+162, |  #Charge Damage
+300, |  #Knockback Velocity
+7, |   #Knockback Angle
+0, |   #Homing
+18, |   #Startup Phase Duration (+3 for # of Frames)
+8, |   #Attack Phase Duration (+1 for # of Frames)
+44, |   #Recovery Phase Duration
+0, |   #Startup Phase Speed
+400, |  #Attack Phase Speed
 80, |   #Recovery Phase Speed
-63, |    #Startup Phase Angle
--35, |    #Attack Phase Angle
-0, |  #Recovery Phase Angle
-35, |   #Hitbox Size Related
-10, |   #Hitbox Size Related
--10       #Hitbox Size Related
+0, |    #Startup Phase Angle
+0, |    #Attack Phase Angle
+-90, |  #Recovery Phase Angle
+70, |   #Hitbox Size Related
+0, |   #Hitbox Size Related
+-20       #Hitbox Size Related
 word [8] |
 0x8354837D, 0x815B835C, 0x838B8367, 0x82510000, 0x00000000, 0x00000000, 0x00000000, 0x00000000 #Unused Charge Title
 byte [2] |
 11, |    #Invulnerability
 0       #Invisibility
 half [16] |
-90, |  #Charge Damage
-120, |  #Knockback Velocity
-20, |   #Knockback Angle
+135, |  #Charge Damage
+200, |  #Knockback Velocity
+-60, |   #Knockback Angle
 0, |   #Homing
-15, |   #Startup Phase Duration (+3 for # of Frames)
-20, |   #Attack Phase Duration (+1 for # of Frames)
+40, |   #Startup Phase Duration (+3 for # of Frames)
+12, |   #Attack Phase Duration (+1 for # of Frames)
 30, |   #Recovery Phase Duration
 0, |   #Startup Phase Speed
-120, |  #Attack Phase Speed
-180, |   #Recovery Phase Speed
+65186, |  #Attack Phase Speed
+100, |   #Recovery Phase Speed
 0, |    #Startup Phase Angle
-150, |    #Attack Phase Angle
--120, |  #Recovery Phase Angle
-50, |   #Hitbox Size Related
+5, |    #Attack Phase Angle
+-130, |  #Recovery Phase Angle
+90, |   #Hitbox Size Related
 0, |   #Hitbox Size Related
--10       #Hitbox Size Related
+-20       #Hitbox Size Related
 ExtraBytes:
-byte [5] 1, 2, 9, 5, 3   #Stat Line
-byte [1] 3  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
-word [3] 0x20284352, 0x42522900, 0x00000000
+byte [5] 4, 2, 8, 5, 6   #Stat Line
+byte [1] 2  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
+word [3] 0x20284458, 0x45290000, 0x00000000 #Build Code
 MASTERCODE:
 PULSE
 {

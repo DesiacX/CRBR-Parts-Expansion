@@ -13,7 +13,7 @@ Dolphin Pod [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Dolphin Pod"
+"Dolphin Pod (CRBR)"
 PartDescription:
     String|
 "Arcs toward target. 
@@ -43,6 +43,9 @@ RoboBytes:
 * 00000000 00000000
 * 00000000 00000000
 * 3F800000 00000000
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

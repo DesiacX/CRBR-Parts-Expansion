@@ -13,7 +13,7 @@ Right Flank Bomb H [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Right Flank Bomb H"
+"Right Flank Bomb H (CRBR)"
 PartDescription:
     String|
 "Launches right then turns 
@@ -56,6 +56,9 @@ RoboBytes:
 * 00000000 00000000
 * 00000000 00000000
 * 3F800000 DEADBEEF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

@@ -1149,9 +1149,9 @@ END:
 * E0000000 80008000
 
 
-###################
+##############################################
 Part Name and Description Control V2 [DesiacX]
-###################
+##############################################
 .alias LocLow = 0x8023
 .alias BodyNameLocHigh = 0xBD50
 .alias DescriptionHigh = 0xBD64
@@ -1283,9 +1283,16 @@ End:
 
 op li r0, 0 @ $800F9700 #Forces Description Updates
 op nop @ $800F972C  #Forces Description Updates
-############################
+###################################
+!Force Description Updates [DesiacX]
+###################################
+#Disable this if Debugging on the Part Select Screen. It forces the selected part to update every frame, which will mess with Breakpointing.
+op li r0, 0 @ $800F9700 #Forces Description Updates
+op nop @ $800F972C  #Forces Description Updates
+
+###############################
 Part Model Control V2 [DesiacX]
-############################
+###############################
 .alias ModelLocLow = 0x8023
 .alias BodyModelLoc = 0xBD7C
 .alias GunModelLoc = BodyModelLoc + 4

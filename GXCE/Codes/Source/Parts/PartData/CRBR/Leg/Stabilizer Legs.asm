@@ -13,7 +13,7 @@ Stabilizer Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Stabilizer Legs"
+"Stabilizer Legs (CRBR)"
 PartDescription:
     String|
 "Exhibits good acceleration. 
@@ -26,6 +26,9 @@ choose from."
 RoboBytes:
 * 0064C8C8 64640164
 * 64646464 646464FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

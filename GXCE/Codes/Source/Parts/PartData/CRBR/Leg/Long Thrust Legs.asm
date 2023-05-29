@@ -13,7 +13,7 @@ Long Thrust Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Long Thrust Legs"
+"Long Thrust Legs (CRBR)"
 PartDescription:
     String|
 "Increases your dash distance. 
@@ -26,6 +26,9 @@ you and your opponent. "
 RoboBytes:
 * 00646464 64640164
 * 64646464 C8C864FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

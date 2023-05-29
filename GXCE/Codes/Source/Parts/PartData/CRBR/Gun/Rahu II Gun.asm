@@ -13,7 +13,7 @@ Rahu II Gun [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Rahu II Gun^`"
+"Rahu II Gun^` (CRBR)"
 PartDescription:
     String|
 "A gun that was merged with an 
@@ -89,6 +89,9 @@ RoboBytes:
 * 00000000 00000000
 * 00000000 00000000
 * 00000000 DEADBEEF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

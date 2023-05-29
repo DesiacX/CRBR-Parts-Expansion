@@ -13,7 +13,7 @@ Milky Way [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Milky Way"
+"Milky Way (CRBR)"
 PartDescription:
     String|
 "Aerial Beauty model. 
@@ -115,6 +115,10 @@ half [16] |
 30, |   #Hitbox Size Related
 30, |   #Hitbox Size Related
 -30       #Hitbox Size Related
+ExtraBytes:
+byte [5] 4, 4, 6, 7, 5   #Stat Line
+byte [1] 0  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

@@ -13,7 +13,7 @@ Reflection Pod [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Reflection Pod"
+"Reflection Pod (CRBR)"
 PartDescription:
     String|
 "Doesn't chase your opponent, 
@@ -45,6 +45,9 @@ RoboBytes:
 * 00000000 00000000
 * 00000000 00000000
 * 3E4CCCCD 00000000
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

@@ -13,7 +13,7 @@ Metal Ape [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Metal Ape"
+"Metal Ape (CRBR)"
 PartDescription:
     String|
 "A Metal Grappler model. 
@@ -114,6 +114,10 @@ half [16] |
 90, |   #Hitbox Size Related
 0, |   #Hitbox Size Related
 0       #Hitbox Size Related
+ExtraBytes:
+byte [5] 10, 8, 3, 3, 4   #Stat Line
+byte [1] 0  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

@@ -13,7 +13,7 @@ Chickenheart [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Chickenheart"
+"Chickenheart (CRBR)"
 PartDescription:
     String|
 "A Burning Beast model.
@@ -117,6 +117,10 @@ half [16] |
 40, |   #Hitbox Size Related
 20, |   #Hitbox Size Related
 -50       #Hitbox Size Related
+ExtraBytes:
+byte [5] 5, 5, 3, 7, 9   #Stat Line
+byte [1] 3  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

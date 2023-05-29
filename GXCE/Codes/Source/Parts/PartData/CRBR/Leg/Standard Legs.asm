@@ -13,7 +13,7 @@ Standard Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Standard Legs"
+"Standard Legs (CRBR)"
 PartDescription:
     String|
 "Basic set of legs. 
@@ -26,6 +26,9 @@ with a different set of legs."
 RoboBytes:
 * 00646464 64640164
 * 64646464 646464FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

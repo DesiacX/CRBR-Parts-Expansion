@@ -13,7 +13,7 @@ Earth [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Earth"
+"Earth (CRBR)"
 PartDescription:
     String|
 "Aerial Beauty model. 
@@ -115,6 +115,10 @@ half [16] |
 40, |   #Hitbox Size Related
 20, |   #Hitbox Size Related
 0       #Hitbox Size Related
+ExtraBytes:
+byte [5] 4, 5, 5, 7, 5   #Stat Line
+byte [1] 1  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

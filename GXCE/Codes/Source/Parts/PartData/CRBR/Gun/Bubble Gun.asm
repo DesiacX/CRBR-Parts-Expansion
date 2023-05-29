@@ -13,7 +13,7 @@ Bubble Gun [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Bubble Gun"
+"Bubble Gun (CRBR)"
 PartDescription:
     String|
 "Fires large, slow bubbles 
@@ -26,68 +26,279 @@ Advisory: When firing from
 the ground, hide behind walls. 
 In the air, scatter your shots."
 RoboBytes:
-* 000A0000 00000000
-* FFFFFFFF FFFFFFFF
-* FFFFFFFF FFFFFFFF
-* 0000003C 00000001
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 3F800000 05010201
-* 141E0000 00001C71
-* 38E30000 004B0000
-* 3DB851EC 3CA3D70A
-* 3D23D70A 3F19999A
-* 00000028 01F40001
-* 00000014 00640064
-* 00230064 00050000
-* 3D4CCCCD 00000000
-* 00000000 3ECCCCCD
-* 00000028 01F40001
-* 00000014 00640064
-* 00230064 00050000
-* 3D4CCCCD 00000000
-* 00000000 3E99999A
-* 00000028 01F40001
-* 00000014 00640064
-* 00230064 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 05010100
-* 14190000 00000AAA
-* 40000000 00410000
-* 3DB851EC 3D23D70A
-* 3CA3D70A 3F3851EC
-* 0000002D 03840001
-* 00000014 00640064
-* 00190064 00760000
-* 3D4CCCCD 00000000
-* 00000000 3F0CCCCD
-* 0000002D 03840001
-* 00000014 00640064
-* 00190064 00050000
-* 3D4CCCCD 00000000
-* 00000000 3EB33333
-* 0000002D 03840001
-* 00000014 00640064
-* 00190064 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 DEADBEEF
+byte[56] |
+0, | #Illegal Toggle
+10, | #Slideshot Duration
+0, | #Related to Homing when rounds aren't facing the opponent
+0, 0, 0, 0, | #Nothing?
+0, | #Trail (0 for Invisible, 1 for Trail VFX)
+255, 255, 255, 255, | #Left Portion RGBA
+255, 255, 255, 255, | #Middle Portion RGBA
+255, 255, 255, 255, | #Right Portion RGBA
+255, 255, 255, 255, | #Unknown RGBA
+0, 0, 0, 60, | #Trail Duration
+0, 0, 0, 1, | #????
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 #????
+float 1.0 #Trail Width, Start of Ground Shot
+#############
+#Ground Shot#
+#############
+byte[6] |
+5, | #Startup
+1, | #Number of Shots
+2, | #Rounds per Shot
+1, | #Shot Spread (00 for Vertical, 01 for Horizontal)
+20, | #Delay Between Shots
+30 #Endlag
+half 0 #Shot Randomization
+byte[2] |
+0, | #Spread Phase
+0 #Padding
+half[3] |
+7281, | #Initial Shot Angle
+14563, | #Angle Between Simultaneous Shots
+0 #????
+#First Phase
+half[2] |
+75, | #Phase Duration
+0 #Padding
+float[4] |
+0.09, | #Phase Speed
+0.02, | #Horizontal Homing
+0.04, | #Vertical Homing
+0.6 #Shot Size
+byte[2] |
+0, | #Lingering Hitbox Duration
+0 #Padding
+half[9] |
+40, | #Damage
+500, | #Down
+1, | #Knockback Velocity
+0, | #Knockback Angle
+20, | #Hitstun
+100, | #On-Hit Gravity
+100, | #Knockback Velocity (Downed)
+35, | #Knockback Angle (Downed)
+100 #On-Hit Gravity (Downed)
+#Second Phase
+half[2] |
+5, | #Phase Duration
+0 #Padding
+float[4] |
+0.05, | #Phase Speed
+0.0, | #Horizontal Homing
+0.0, | #Vertical Homing
+0.4 #Shot Size
+byte[2] |
+0, | #Lingering Hitbox Duration
+0 #Padding
+half[9] |
+40, | #Damage
+500, | #Down
+1, | #Knockback Velocity
+0, | #Knockback Angle
+20, | #Hitstun
+100, | #On-Hit Gravity
+100, | #Knockback Velocity (Downed)
+35, | #Knockback Angle (Downed)
+100 #On-Hit Gravity (Downed)
+#Third Phase
+half[2] |
+5, | #Phase Duration
+0 #Padding
+float[4] |
+0.05, | #Phase Speed
+0.0, | #Horizontal Homing
+0.0, | #Vertical Homing
+0.3 #Shot Size
+byte[2] |
+0, | #Lingering Hitbox Duration
+0 #Padding
+half[9] |
+40, | #Damage
+500, | #Down
+1, | #Knockback Velocity
+0, | #Knockback Angle
+20, | #Hitstun
+100, | #On-Hit Gravity
+100, | #Knockback Velocity (Downed)
+35, | #Knockback Angle (Downed)
+100 #On-Hit Gravity (Downed)
+#Fourth Phase
+half[2] |
+0, | #Phase Duration
+0 #Padding
+float[4] |
+0.0, | #Phase Speed
+0.0, | #Horizontal Homing
+0.0, | #Vertical Homing
+0.0 #Shot Size
+byte[2] |
+0, | #Lingering Hitbox Duration
+0 #Padding
+half[9] |
+0, | #Damage
+0, | #Down
+0, | #Knockback Velocity
+0, | #Knockback Angle
+0, | #Hitstun
+0, | #On-Hit Gravity
+0, | #Knockback Velocity (Downed)
+0, | #Knockback Angle (Downed)
+0 #On-Hit Gravity (Downed)
+#Fifth Phase
+half[2] |
+0, | #Phase Duration
+0 #Padding
+float[4] |
+0.0, | #Phase Speed
+0.0, | #Horizontal Homing
+0.0, | #Vertical Homing
+0.0 #Shot Size
+byte[2] |
+0, | #Lingering Hitbox Duration
+0 #Padding
+half[9] |
+0, | #Damage
+0, | #Down
+0, | #Knockback Velocity
+0, | #Knockback Angle
+0, | #Hitstun
+0, | #On-Hit Gravity
+0, | #Knockback Velocity (Downed)
+0, | #Knockback Angle (Downed)
+0 #On-Hit Gravity (Downed)
+##########
+#Air Shot#
+##########
+byte[6] |
+5, | #Startup
+1, | #Number of Shots
+1, | #Rounds per Shot
+0, | #Shot Spread (00 for Vertical, 01 for Horizontal)
+20, | #Delay Between Shots
+25 #Endlag
+half 0 #Shot Randomization
+byte[2] |
+0, | #Spread Phase
+0 #Padding
+half[3] |
+2730, | #Initial Shot Angle
+16384, | #Angle Between Simultaneous Shots
+0 #????
+#First Phase
+half[2] |
+65, | #Phase Duration
+0 #Padding
+float[4] |
+0.09, | #Phase Speed
+0.04, | #Horizontal Homing
+0.02, | #Vertical Homing
+0.72 #Shot Size
+byte[2] |
+0, | #Lingering Hitbox Duration
+0 #Padding
+half[9] |
+45, | #Damage
+900, | #Down
+1, | #Knockback Velocity
+0, | #Knockback Angle
+20, | #Hitstun
+100, | #On-Hit Gravity
+100, | #Knockback Velocity (Downed)
+25, | #Knockback Angle (Downed)
+100 #On-Hit Gravity (Downed)
+#Second Phase
+half[2] |
+118, | #Phase Duration
+0 #Padding
+float[4] |
+0.05, | #Phase Speed
+0.0, | #Horizontal Homing
+0.0, | #Vertical Homing
+0.55 #Shot Size
+byte[2] |
+0, | #Lingering Hitbox Duration
+0 #Padding
+half[9] |
+45, | #Damage
+900, | #Down
+1, | #Knockback Velocity
+0, | #Knockback Angle
+20, | #Hitstun
+100, | #On-Hit Gravity
+100, | #Knockback Velocity (Downed)
+25, | #Knockback Angle (Downed)
+100 #On-Hit Gravity (Downed)
+#Third Phase
+half[2] |
+5, | #Phase Duration
+0 #Padding
+float[4] |
+0.05, | #Phase Speed
+0.0, | #Horizontal Homing
+0.0, | #Vertical Homing
+0.35 #Shot Size
+byte[2] |
+0, | #Lingering Hitbox Duration
+0 #Padding
+half[9] |
+45, | #Damage
+900, | #Down
+1, | #Knockback Velocity
+0, | #Knockback Angle
+20, | #Hitstun
+100, | #On-Hit Gravity
+100, | #Knockback Velocity (Downed)
+25, | #Knockback Angle (Downed)
+100 #On-Hit Gravity (Downed)
+#Fourth Phase
+half[2] |
+0, | #Phase Duration
+0 #Padding
+float[4] |
+0.0, | #Phase Speed
+0.0, | #Horizontal Homing
+0.0, | #Vertical Homing
+0.0 #Shot Size
+byte[2] |
+0, | #Lingering Hitbox Duration
+0 #Padding
+half[9] |
+0, | #Damage
+0, | #Down
+0, | #Knockback Velocity
+0, | #Knockback Angle
+0, | #Hitstun
+0, | #On-Hit Gravity
+0, | #Knockback Velocity (Downed)
+0, | #Knockback Angle (Downed)
+0 #On-Hit Gravity (Downed)
+#Fifth Phase
+half[2] |
+0, | #Phase Duration
+0 #Padding
+float[4] |
+0.0, | #Phase Speed
+0.0, | #Horizontal Homing
+0.0, | #Vertical Homing
+0.0 #Shot Size
+byte[2] |
+0, | #Lingering Hitbox Duration
+0 #Padding
+half[9] |
+0, | #Damage
+0, | #Down
+0, | #Knockback Velocity
+0, | #Knockback Angle
+0, | #Hitstun
+0, | #On-Hit Gravity
+0, | #Knockback Velocity (Downed)
+0, | #Knockback Angle (Downed)
+0 #On-Hit Gravity (Downed)
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

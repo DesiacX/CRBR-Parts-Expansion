@@ -13,7 +13,7 @@ Trio Pod H [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Trio Pod H"
+"Trio Pod H (CRBR)"
 PartDescription:
     String|
 "Cannot travel far, but can 
@@ -43,6 +43,9 @@ RoboBytes:
 * 00000000 00000000
 * 00000000 00000000
 * 3F800000 00000000
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

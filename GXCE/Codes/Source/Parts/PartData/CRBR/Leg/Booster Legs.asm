@@ -13,7 +13,7 @@ Booster Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Booster Legs"
+"Booster Legs (CRBR)"
 PartDescription:
     String|
 "Increases dash speed. 
@@ -24,6 +24,9 @@ fast in the air."
 RoboBytes:
 * 00646464 64640164
 * 64649664 C832C8FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

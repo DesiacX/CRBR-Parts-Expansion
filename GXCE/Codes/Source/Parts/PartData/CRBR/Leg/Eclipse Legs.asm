@@ -13,7 +13,7 @@ Eclipse Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Eclipse Legs^`"
+"Eclipse Legs^` (CRBR)"
 PartDescription:
     String|
 "Illegal part. 
@@ -23,6 +23,9 @@ Increases jump height."
 RoboBytes:
 * 01646464 C801C8C8
 * 64646464 646464FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

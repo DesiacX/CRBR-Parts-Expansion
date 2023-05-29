@@ -13,7 +13,7 @@ Wide Jump Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Wide Jump Legs"
+"Wide Jump Legs (CRBR)"
 PartDescription:
     String|
 "Makes long jumps possible. 
@@ -26,6 +26,9 @@ or continuous jump."
 RoboBytes:
 * 00646464 6464C864
 * 64646464 646464FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

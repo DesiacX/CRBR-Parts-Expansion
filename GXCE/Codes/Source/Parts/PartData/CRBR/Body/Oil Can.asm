@@ -12,7 +12,7 @@ Oil Can [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Oil Can"
+"Oil Can (CRBR)"
 PartDescription:
     String|
 "A Shining Fighter model 
@@ -110,6 +110,10 @@ half [16] |
 40, |   #Hitbox Size Related
 20, |   #Hitbox Size Related
 -50       #Hitbox Size Related
+ExtraBytes:
+byte [5] 1, 3, 5, 5, 8   #Stat Line
+byte [1] 3  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

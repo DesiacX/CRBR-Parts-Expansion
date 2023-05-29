@@ -13,7 +13,7 @@ High Jump Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"High Jump Legs"
+"High Jump Legs (CRBR)"
 PartDescription:
     String|
 "Increases jump height. 
@@ -24,6 +24,9 @@ attack from the air."
 RoboBytes:
 * 00646464 C8010164
 * 64646464 646464FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

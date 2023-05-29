@@ -1,6 +1,6 @@
 #Custom Robo Battle Revolution Base Game Parts
 #Body
-
+.include "Source/Parts/PartData/Custom/Body/Swift DX.asm"
 #Guns
 
 #Bomb

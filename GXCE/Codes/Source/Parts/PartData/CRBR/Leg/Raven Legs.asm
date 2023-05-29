@@ -13,7 +13,7 @@ Raven Legs [Custom Robo Battle Revolution]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Raven Legs^`"
+"Raven Legs^` (CRBR)"
 PartDescription:
     String|
 "Illegal part. 
@@ -22,6 +22,9 @@ Increases dash speed."
 RoboBytes:
 * 01966464 64640164
 * 64640164 C832C8FF
+ExtraBytes:
+byte [5] 5, 5, 5, 5, 5   #Stat Line
+word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {
