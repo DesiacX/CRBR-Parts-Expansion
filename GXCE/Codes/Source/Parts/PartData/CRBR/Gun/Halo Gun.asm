@@ -299,7 +299,7 @@ half[9] |
 20, | #Knockback Angle (Downed)
 90 #On-Hit Gravity (Downed)
 ExtraBytes:
-byte [5] 5, 5, 5, 5, 5   #Stat Line
+byte [5] 6, 6, 8, 6, 6   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE

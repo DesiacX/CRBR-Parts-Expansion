@@ -347,6 +347,8 @@ Extra Bytes - Stat Lines [DesiacX]
 #r7 = Physical Page
 #r8 = Phyiscal Slot
 #r24 = part type
+op nop @  $800FD1CC #Makes other parts function similar to Bodies, with a range of 1 - 10 as opposed to 1 - 5
+
 HOOK @ $800FD0B4
 {
   #r0, r3, r5 are usable
