@@ -2,7 +2,7 @@
 #Body
 .include "Source/Parts/PartData/Custom/Body/Swift DX.asm"
 #Guns
-
+.include "Source/Parts/PartData/Custom/Gun/Dragon Fist.asm"
 #Bomb
 
 #Pods

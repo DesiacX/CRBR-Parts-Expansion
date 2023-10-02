@@ -40,6 +40,8 @@ half [27]|
 420   | #Tag Cooldown Frames
 @ $801C6C0C
 
+* 040466A4 38C00003 #Invuln Frames for when you press Tag while Downed. Default 3 frames.
+
 ######################################################
 Stagelist Toggle (Tournamnet / Vanilla) [DE, DesiacX]
 ######################################################
@@ -90,6 +92,7 @@ Unlock Everything [?????]
 Illegal Parts enabled on startup [DesiacX]
 ##########################################
 op stb r6, 0x43(r21) @ $800F1098
+
 
 ############################
 Boot to Main Menu v1.1 [DesiacX]
@@ -201,7 +204,7 @@ op nop @ $80109DC0
 op nop @ $80109E68
 
 ###################################
-Default Color is Original [DesiacX]
+!Default Color is Original [DesiacX]
 ###################################
 op li r3, 0x0 @ $80109E78
 
@@ -395,7 +398,6 @@ restore:
   rlwinm r3, r28, 0, 24, 31 #Restore r3
   lbzx r5, r20, r3  #Hook Point
 }
-
 
 .include Source/Extras/ZAltStages.asm
 .include Source/Stages/StageDisablers.asm

@@ -13,7 +13,7 @@ Plus One Legs C [CRBR Parts Expansion, de, DesiacX]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Plus One Legs C"
+"Plus One Legs C (DXE)"
 PartDescription:
     String|
 "A variant of the weakest 
@@ -23,6 +23,9 @@ Weakens all abilities."
 RoboBytes:
 * 00646464 64640164
 * 64646464 64646400
+ExtraBytes:
+byte [5] 10, 10, 2, 10, 10   #Stat Line
+word [3] 0x20284458, 0x45290000, 0x00000000 #Build Code
 MASTERCODE:
 PULSE
 {

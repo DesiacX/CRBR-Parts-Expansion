@@ -13,7 +13,7 @@ Plus One Legs U [CRBR Parts Expansion, de, DesiacX]
     .GOTO->MASTERCODE
 PartName:
     String|
-"Plus One Legs U^`"
+"Plus One Legs U^` (DXE)"
 PartDescription:
     String|
 "A leg part that was merged 
@@ -23,6 +23,9 @@ Upgrades all abilities."
 RoboBytes:
 * 01C8C8C8 6464C8C8
 * 01640164 C864C8FF
+ExtraBytes:
+byte [5] 10, 10, 2, 10, 10   #Stat Line
+word [3] 0x20284458, 0x45290000, 0x00000000 #Build Code
 MASTERCODE:
 PULSE
 {
