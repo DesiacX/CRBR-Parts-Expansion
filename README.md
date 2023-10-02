@@ -39,7 +39,8 @@ Currently, there is no way to add unique models / GFX / SFX to the game. Due to 
 1. Download a version of Dolphin that has Riivolution Compatibility. The most recent Beta is always a safe option.
 2. Setup Dolphin and your copy of Custom Robo as you normally would, but include the following code. This code will allow the game to utilize the codes loaded in by Riivolution
 ```
-External Codeset [DesiacX] 
+External Codeset [DesiacX]
+200000F0 02000000 
 21800000 00D0C0DE 
 21800004 00D0C0DE 
 4E000018 00000000 
@@ -72,10 +73,17 @@ Each part has a file associated to it, and all files follow a similar structure.
 To add or remove parts, simply open the PartsList.asm file found in Parts/PartData/CRBR/. The parts are added to the game in the order they appear in this file, so it is possible to re-organize the parts list simply by moving the text in these files around. In addition by editing GXCE01.asm, it is possible to add an entire custom part list or an entirely seperate builds part list.
 
 ## Included Codes
-- Unlock Everything [????]
-- Synchronized Spawns V2 [DesiacX]
-- HP Defaults to 70% for Tag Battles in V.S. Mode V2 [DesiacX]
-- Stagelist Toggle (Tournament / Vanilla) and associated Stage Disablers [DE:, DesiacX]
+- Tournament Codes
+  - Unlock Everything [????]
+  - Synchronized Spawns V2 [DesiacX]
+  - HP Defaults to 70% for Tag Battles in V.S. Mode V2 [DesiacX]
+  - Stagelist Toggle (Tournament / Vanilla), ZAlt Stages, and Stage Disablers [DE:, DesiacX]
+  - Illegal Parts enabled on startup [DesiacX]
+- QOL Codes
+  - Universal Settings Modifier v1 [DesiacX]
+  - Temporarily Disable Illegal Parts by holding R [DesiacX]
+  - Remember Parts Selection [DesiacX]
+  - Boot to Main Menu v1.1 [DesiacX]
 
 ## Redistribution and Crediting
 When creating parts based off of others or redistributing them in builds, you must properly credit them where possible. In every code title, there is a part of the name for credits. Please utilize that to credit yourself and others who contributed.
