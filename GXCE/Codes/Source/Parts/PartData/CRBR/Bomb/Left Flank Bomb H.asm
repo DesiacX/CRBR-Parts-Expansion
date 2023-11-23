@@ -28,34 +28,131 @@ foe's movements and fire
 from both the ground 
 and air."
 RoboBytes:
-* 00010064 6E5A0000
-* 00A00000 0101000E
-* 00120000 3F800000
-* 3FB33333 3F170A3D
-* 003C0258 00500014
-* 001E0014 00500014
-* 00140000 00540000
-* 003C0037 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 6E5A0000
-* 00B40000 0101000D
-* 00100000 3F666666
-* 3F8CCCCD 3F170A3D
-* 002A01A4 00500014
-* 001E0014 00500014
-* 00140000 FFBA0000
-* 003CFFC9 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* FFFFFFFF FFFFFFFF
-* FFFFFFFF FFFFFFFF
-* 0000003C 00000001
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 3F800000 DEADBEEF
+byte [2] |
+00, | #Illegal Toggle 
+1 #Number of Bombs Fired
+half [1] 100 #Explosion Trigger Radius
+#################
+## Ground Shot ##
+#################
+byte [2] |
+110, | #Starting location of reticle (% of distance to opponent) 
+90, #Reload 
+half [3] |
+0, | #Burrow Time 
+160, | #Projectile Speed 
+0x0000 #Empty Data? 
+byte [2] |
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+14, | #Explosion Expansion Radius 
+18, | #Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+1.0, | #Explosion Size after Initial Expansion 
+1.4, | #Final Explosion Size 
+0.59 #Explosion Height 
+half [10] |
+60, | #Damage 
+600, | #Down 
+80, | #Knockback Velocity 
+20, | #Knockback Angle 
+30, | #Histun 
+20, | #On Hit Gravity 
+80, | #Knockback Velocity (Downed) 
+20, | #Knockback Angle (Downed) 
+20, | #On Hit Gravity (Downed)
+0x0000 #Empty Data? 
+
+##### First Ground Bomb #####
+half [4] |
+84, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+60, | #Vertical Arc Angle 
+55 #Horizontal Arc Angle 
+
+##### Second Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Third Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Fourth Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+#################
+## Air Shot ##
+#################
+byte [2] |
+110, | #Starting location of reticle (% of distance to opponent) 
+90 #Reload 
+half [3] |
+0, | #Burrow Time 
+180, | #Projectile Speed 
+0x0000 #Empty Data? 
+byte [2] |
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+13, | #Explosion Expansion Radius 
+16, | #Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+0.9, | #Explosion Size after Initial Expansion 
+1.1, | #Final Explosion Size 
+0.59 #Explosion Height 
+half [10] |
+42, | #Damage 
+420, | #Down 
+80, | #Knockback Velocity 
+20, | #Knockback Angle 
+30, | #Histun 
+20, | #On Hit Gravity 
+80, | #Knockback Velocity (Downed) 
+20, | #Knockback Angle (Downed) 
+20, | #On Hit Gravity (Downed)
+0x0000 #Empty Data? 
+
+##### First Ground Bomb #####
+half [4] |
+65466, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+60, | #Vertical Arc Angle 
+65481 #Horizontal Arc Angle 
+
+##### Second Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Third Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Fourth Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+word [14] 0x00000000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0000003C, 0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x3F800000 #Unknown Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

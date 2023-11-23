@@ -24,8 +24,23 @@ with any other parts, use it
 when there is nothing better to 
 choose from."
 RoboBytes:
-* 0064C8C8 64640164
-* 64646464 646464FF
+byte [16] |
+0, | #Illegal Toggle 
+100, | #Ground Speed
+200, | #Ground Accel 
+200, | #Ground Turning
+100, | #Jump Height
+100, | #Jump Speed 
+1, | #Lateral Air Speed 
+100, | #Air Accel 
+100, | #Landing Lag 
+100, | #Gravity 
+100, | #Dash Startup 
+100, | #Dash Landing Lag 
+100, | #Continuous Jump Height 
+100, | #Dash Duration 
+100, | #Dash Speed 
+0xFF  #Filler Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

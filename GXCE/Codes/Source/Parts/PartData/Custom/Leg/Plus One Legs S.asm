@@ -23,8 +23,23 @@ characteristics.
 Possesses no ascent or 
 descent augmentation."
 RoboBytes:
-* 00646464 64640164
-* 64646464 64646400
+byte [16] |
+00, | #Illegal Toggle 
+100, | #Ground Speed
+100, | #Ground Accel 
+100, | #Ground Turning
+100, | #Jump Height
+100, | #Jump Speed 
+1, | #Lateral Air Speed 
+100, | #Air Accel 
+100, | #Landing Lag 
+100, | #Gravity 
+100, | #Dash Startup 
+100, | #Dash Landing Lag 
+100, | #Continuous Jump Height 
+100, | #Dash Duration 
+100, | #Dash Speed 
+0xFF #Filler Data
 ExtraBytes:
 byte [5] 10, 10, 2, 10, 10   #Stat Line
 word [3] 0x20284458, 0x45290000, 0x00000000 #Build Code

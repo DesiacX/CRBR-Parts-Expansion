@@ -20,8 +20,23 @@ PartDescription:
 Increases jump height. 
 Increases dash speed."
 RoboBytes:
-* 01966464 64640164
-* 64640164 C832C8FF
+byte [16] |
+1, | #Illegal Toggle 
+150, | #Ground Speed
+100, | #Ground Accel 
+100, | #Ground Turning
+100, | #Jump Height
+100, | #Jump Speed 
+1, | #Lateral Air Speed 
+100, | #Air Accel 
+100, | #Landing Lag 
+100, | #Gravity 
+1, | #Dash Startup 
+100, | #Dash Landing Lag 
+200, | #Continuous Jump Height 
+50, | #Dash Duration 
+200, | #Dash Speed 
+0xFF  #Filler Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

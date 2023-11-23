@@ -19,8 +19,23 @@ PartDescription:
 "The weakest leg part. 
 Weakens all abilities."
 RoboBytes:
-* 005A645A 5A5A015A
-* 5A5A5A5A 5A5A5AFF
+byte [16] |
+0, | #Illegal Toggle 
+90, | #Ground Speed
+100, | #Ground Accel 
+90, | #Ground Turning
+90, | #Jump Height
+90, | #Jump Speed 
+1, | #Lateral Air Speed 
+90, | #Air Accel 
+90, | #Landing Lag 
+90, | #Gravity 
+90, | #Dash Startup 
+90, | #Dash Landing Lag 
+90, | #Continuous Jump Height 
+90, | #Dash Duration 
+90, | #Dash Speed 
+0xFF  #Filler Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

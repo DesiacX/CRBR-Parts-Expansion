@@ -21,8 +21,23 @@ with a living being known to
 jump one extra time. 
 Upgrades all abilities."
 RoboBytes:
-* 01C8C8C8 6464C8C8
-* 01640164 C864C8FF
+byte [16] |
+01, | #Illegal Toggle 
+200, | #Ground Speed
+200, | #Ground Accel 
+200, | #Ground Turning
+100, | #Jump Height
+100, | #Jump Speed 
+200, | #Lateral Air Speed 
+200, | #Air Accel 
+1, | #Landing Lag 
+100, | #Gravity 
+1, | #Dash Startup 
+100, | #Dash Landing Lag 
+200, | #Continuous Jump Height 
+100, | #Dash Duration 
+200, | #Dash Speed 
+0xFF #Filler Data
 ExtraBytes:
 byte [5] 10, 10, 2, 10, 10   #Stat Line
 word [3] 0x20284458, 0x45290000, 0x00000000 #Build Code

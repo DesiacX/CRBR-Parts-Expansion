@@ -21,8 +21,23 @@ Enables sharp turning in
 the air. 
 Increases jump height."
 RoboBytes:
-* 01646464 C801C8C8
-* 64646464 646464FF
+byte [16] |
+1, | #Illegal Toggle 
+100, | #Ground Speed
+100, | #Ground Accel 
+100, | #Ground Turning
+200, | #Jump Height
+1, | #Jump Speed 
+200, | #Lateral Air Speed 
+200, | #Air Accel 
+100, | #Landing Lag 
+100, | #Gravity 
+100, | #Dash Startup 
+100, | #Dash Landing Lag 
+100, | #Continuous Jump Height 
+100, | #Dash Duration 
+100, | #Dash Speed 
+0xFF  #Filler Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

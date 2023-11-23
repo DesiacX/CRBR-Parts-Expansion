@@ -23,34 +23,131 @@ within your robo's range.
 Launches one bomb at a time. 
 Blows target diagonally upward."
 RoboBytes:
-* 01040032 005A0000
-* 00B40000 0101003C
-* 00190000 3F800000
-* 3F800000 40BC28F6
-* 00480258 00780046
-* 001E0064 00780046
-* 00640000 012C012C
-* 00640000 FED4012C
-* 00640000 012CFED4
-* 00640000 FED4FED4
-* 00640000 005A0000
-* 00B40000 01010030
-* 00150000 3F800000
-* 3F800000 40BC28F6
-* 00480258 00780046
-* 001E0064 00780046
-* 00640000 01A40000
-* 00500000 FE5C0000
-* 00500000 000001A4
-* 00500000 0000FE5C
-* 00500000 00000000
-* FFFFFFFF FFFFFFFF
-* FFFFFFFF FFFFFFFF
-* 0000003C 00000001
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 3F800000 DEADBEEF
+byte [2] |
+01, | #Illegal Toggle 
+4 #Number of Bombs Fired
+half [1] 50 #Explosion Trigger Radius
+#################
+## Ground Shot ##
+#################
+byte [2] |
+0, | #Starting location of reticle (% of distance to opponent) 
+90, #Reload 
+half [3] |
+0, | #Burrow Time 
+180, | #Projectile Speed 
+0x0000 #Empty Data? 
+byte [2] |
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+60, | #Explosion Expansion Radius 
+25, | #Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+1.0, | #Explosion Size after Initial Expansion 
+1.0, | #Final Explosion Size 
+5.88 #Explosion Height 
+half [10] |
+72, | #Damage 
+600, | #Down 
+120, | #Knockback Velocity 
+70, | #Knockback Angle 
+30, | #Histun 
+100, | #On Hit Gravity 
+120, | #Knockback Velocity (Downed) 
+70, | #Knockback Angle (Downed) 
+100, | #On Hit Gravity (Downed)
+0x0000 #Empty Data? 
+
+##### First Ground Bomb #####
+half [4] |
+300, | #Left / Right Lnading Displacment 
+300, | #Front / Back Landing Displacment 
+100, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Second Ground Bomb #####
+half [4] |
+65236, | #Left / Right Lnading Displacment 
+300, | #Front / Back Landing Displacment 
+100, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Third Ground Bomb #####
+half [4] |
+300, | #Left / Right Lnading Displacment 
+65236, | #Front / Back Landing Displacment 
+100, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Fourth Ground Bomb #####
+half [4] |
+65236, | #Left / Right Lnading Displacment 
+65236, | #Front / Back Landing Displacment 
+100, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+#################
+## Air Shot ##
+#################
+byte [2] |
+0, | #Starting location of reticle (% of distance to opponent) 
+90 #Reload 
+half [3] |
+0, | #Burrow Time 
+180, | #Projectile Speed 
+0x0000 #Empty Data? 
+byte [2] |
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+48, | #Explosion Expansion Radius 
+21, | #Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+1.0, | #Explosion Size after Initial Expansion 
+1.0, | #Final Explosion Size 
+5.88 #Explosion Height 
+half [10] |
+72, | #Damage 
+600, | #Down 
+120, | #Knockback Velocity 
+70, | #Knockback Angle 
+30, | #Histun 
+100, | #On Hit Gravity 
+120, | #Knockback Velocity (Downed) 
+70, | #Knockback Angle (Downed) 
+100, | #On Hit Gravity (Downed)
+0x0000 #Empty Data? 
+
+##### First Ground Bomb #####
+half [4] |
+420, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+80, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Second Ground Bomb #####
+half [4] |
+65116, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+80, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Third Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+420, | #Front / Back Landing Displacment 
+80, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Fourth Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+65116, | #Front / Back Landing Displacment 
+80, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+word [14] 0x00000000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0000003C, 0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x3F800000 #Unknown Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

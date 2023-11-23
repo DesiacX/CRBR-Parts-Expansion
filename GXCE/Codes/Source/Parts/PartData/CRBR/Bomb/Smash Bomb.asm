@@ -23,34 +23,131 @@ Advisory: Use it when your
 opponent tries to attack from 
 the air."
 RoboBytes:
-* 00011194 144B0000
-* 03E80000 01010001
-* 00230000 3F9AE148
-* 3FD851EC 3F000000
-* 004B0258 00B40028
-* 001E0064 00B40028
-* 00640000 000000F0
-* 012C0000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 145A0000
-* 03E80000 0101000E
-* 00120000 3F8CCCCD
-* 3FC51EB8 3F000000
-* 003501A4 00B40028
-* 001E0064 00B40028
-* 00640000 000000F0
-* 00C80000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* FFFFFFFF FFFFFFFF
-* FFFFFFFF FFFFFFFF
-* 0000003C 00000001
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 3F800000 DEADBEEF
+byte [2] |
+00, | #Illegal Toggle 
+1 #Number of Bombs Fired
+half [1] 4500 #Explosion Trigger Radius
+#################
+## Ground Shot ##
+#################
+byte [2] |
+20, | #Starting location of reticle (% of distance to opponent) 
+75, #Reload 
+half [3] |
+0, | #Burrow Time 
+1000, | #Projectile Speed 
+0x0000 #Empty Data? 
+byte [2] |
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+1, | #Explosion Expansion Radius 
+35, | #Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+1.21, | #Explosion Size after Initial Expansion 
+1.69, | #Final Explosion Size 
+0.5 #Explosion Height 
+half [10] |
+75, | #Damage 
+600, | #Down 
+180, | #Knockback Velocity 
+40, | #Knockback Angle 
+30, | #Histun 
+100, | #On Hit Gravity 
+180, | #Knockback Velocity (Downed) 
+40, | #Knockback Angle (Downed) 
+100, | #On Hit Gravity (Downed)
+0x0000 #Empty Data? 
+
+##### First Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+240, | #Front / Back Landing Displacment 
+300, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Second Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Third Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Fourth Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+#################
+## Air Shot ##
+#################
+byte [2] |
+20, | #Starting location of reticle (% of distance to opponent) 
+90 #Reload 
+half [3] |
+0, | #Burrow Time 
+1000, | #Projectile Speed 
+0x0000 #Empty Data? 
+byte [2] |
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+14, | #Explosion Expansion Radius 
+18, | #Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+1.1, | #Explosion Size after Initial Expansion 
+1.54, | #Final Explosion Size 
+0.5 #Explosion Height 
+half [10] |
+53, | #Damage 
+420, | #Down 
+180, | #Knockback Velocity 
+40, | #Knockback Angle 
+30, | #Histun 
+100, | #On Hit Gravity 
+180, | #Knockback Velocity (Downed) 
+40, | #Knockback Angle (Downed) 
+100, | #On Hit Gravity (Downed)
+0x0000 #Empty Data? 
+
+##### First Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+240, | #Front / Back Landing Displacment 
+200, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Second Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Third Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Fourth Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+word [14] 0x00000000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0000003C, 0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x3F800000 #Unknown Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

@@ -24,8 +24,23 @@ legs to drastically change
 the ground distance between 
 you and your opponent."
 RoboBytes:
-* 00C8641E 64640164
-* 64646464 646464FF
+byte [16] |
+0, | #Illegal Toggle 
+200, | #Ground Speed
+100, | #Ground Accel 
+30, | #Ground Turning
+100, | #Jump Height
+100, | #Jump Speed 
+1, | #Lateral Air Speed 
+100, | #Air Accel 
+100, | #Landing Lag 
+100, | #Gravity 
+100, | #Dash Startup 
+100, | #Dash Landing Lag 
+100, | #Continuous Jump Height 
+100, | #Dash Duration 
+100, | #Dash Speed 
+0xFF  #Filler Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

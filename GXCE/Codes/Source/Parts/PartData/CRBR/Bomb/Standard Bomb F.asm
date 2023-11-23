@@ -27,34 +27,131 @@ as possible so your
 opponent cannot hide 
 behind the walls."
 RoboBytes:
-* 0001005A 5A5A0000
-* 00A00000 01010010
-* 00140000 3F800000
-* 3F933333 3F170A3D
-* 00440258 00780046
-* 001E0064 00780046
-* 00640000 00000000
-* 00640000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 555A0000
-* 00B40000 0101000E
-* 00120000 3F733333
-* 3F8F5C29 3F170A3D
-* 003501A4 00780046
-* 001E0064 00780046
-* 00640000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* FFFFFFFF FFFFFFFF
-* FFFFFFFF FFFFFFFF
-* 0000003C 00000001
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 3F800000 00000000
+byte [2] |
+00, | #Illegal Toggle 
+1 #Number of Bombs Fired
+half [1] 90 #Explosion Trigger Radius
+#################
+## Ground Shot ##
+#################
+byte [2] |
+90, | #Starting location of reticle (% of distance to opponent) 
+90, #Reload 
+half [3] |
+0, | #Burrow Time 
+160, | #Projectile Speed 
+0x0000 #Empty Data? 
+byte [2] |
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+16, | #Explosion Expansion Radius 
+20, | #Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+1.0, | #Explosion Size after Initial Expansion 
+1.15, | #Final Explosion Size 
+0.59 #Explosion Height 
+half [10] |
+68, | #Damage 
+600, | #Down 
+120, | #Knockback Velocity 
+70, | #Knockback Angle 
+30, | #Histun 
+100, | #On Hit Gravity 
+120, | #Knockback Velocity (Downed) 
+70, | #Knockback Angle (Downed) 
+100, | #On Hit Gravity (Downed)
+0x0000 #Empty Data? 
+
+##### First Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+100, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Second Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Third Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Fourth Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+#################
+## Air Shot ##
+#################
+byte [2] |
+85, | #Starting location of reticle (% of distance to opponent) 
+90 #Reload 
+half [3] |
+0, | #Burrow Time 
+180, | #Projectile Speed 
+0x0000 #Empty Data? 
+byte [2] |
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+14, | #Explosion Expansion Radius 
+18, | #Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+0.95, | #Explosion Size after Initial Expansion 
+1.12, | #Final Explosion Size 
+0.59 #Explosion Height 
+half [10] |
+53, | #Damage 
+420, | #Down 
+120, | #Knockback Velocity 
+70, | #Knockback Angle 
+30, | #Histun 
+100, | #On Hit Gravity 
+120, | #Knockback Velocity (Downed) 
+70, | #Knockback Angle (Downed) 
+100, | #On Hit Gravity (Downed)
+0x0000 #Empty Data? 
+
+##### First Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Second Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Third Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Fourth Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+word [14] 0x00000000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0000003C, 0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x3F800000 #Unknown Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

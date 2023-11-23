@@ -24,25 +24,65 @@ Blows target slowly upward.
 Advisory: Use it to cover 
 your escape while retreating."
 RoboBytes:
-* 00020100 00000064
-* 01900078 00B40000
-* 00B40000 01051E00
-* 003C005A 000A000A
-* 00A000FA 000000C8
-* 00C80064 0064000A
-* 000A0064 01010005
-* 00220000 3F800000
-* 3F99999A 3F170A3D
-* 002D012C 003C005A
-* 001E000F 003C005A
-* 000F0000 00000000
-* FFFFFFFF FFFFFFFF
-* FFFFFFFF FFFFFFFF
-* 0000003C 00000001
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 3F800000 00000000
+byte[4] |
+00, | #Illegal Toggle 
+2, | #Pod Count (Max 3) 
+1, | #Number of Pods fired at once(Max 3) 
+0x00 #Empty Data? 
+half [8] |
+0, | #Angle between simultaneous pods (Automatically Centered) 
+100, | #Horizontal Explosion Trigger Radius 
+400, | #Vertical Explosion Trigger Radius 
+120, | #Fuse Time 
+180, | #Angle Pod faces at ground launch 
+0x0000, | #Empty Data? 
+180, | #Angle Pod faces at air launch 
+0x0000 #Empty Data? 
+byte[4] |
+1, | #Homing Toggle
+5, | #Roaming Phase Homing 
+30, | #Locked On Phase Homing 
+0x00 #Empty Data? 
+half [13] |
+60, | #Roaming Phase Speed 
+90, | #Locked On Phase Speed 
+10, | #Roaming Phase Height 
+10, | #Locked On Phase Height 
+160, | #Angle for conen of vision for activating lock on phase 
+250, | #Lock On Range 
+0, | #Duration of pause for switching between roaming and locked on. 
+200, | #Initial Ground Launch Angle 
+200, | #Initial Air Launch Angle 
+100, | #Initial Ground Launch Speed 
+100, | #Initial Air Launch Speed 
+10, | #Initial Ground Launch Duration 
+10 #Initial Air Launch Duration 
+byte[4] |
+0, | #Bounce Off Wall Toggle (0 = Slide along wall, 1 = Bounce off wall)
+100, | #Pod Size
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+5, | #Explosion Expansion Duration 
+34, | #Explosion Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+1.0, | #eExplosion Size after Initial Expansion 
+1.2, | #Final Explosion Size 
+0.59 #Explosion Height 
+half [10] |
+45, | #Damage 
+300, | #Down 
+60, | #Knockback Velocity 
+90, | #Knockback Angle 
+30, | #Hitstun 
+15, | #On-Hit Gravity 
+60, | #Knockback Velocity (Downed) 
+90, | #Knockback Anlge (Downed) 
+15, | #On-Hit Gravity (Downed) 
+0x0000 #Empty Data 
+word [14] 0x00000000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0000003C, 0x00000001, | 
+0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x3F800000 #Unknown Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

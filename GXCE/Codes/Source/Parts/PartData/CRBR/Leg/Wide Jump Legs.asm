@@ -24,8 +24,23 @@ legs to move around in
 midair without using a dash 
 or continuous jump."
 RoboBytes:
-* 00646464 6464C864
-* 64646464 646464FF
+byte [16] |
+0, | #Illegal Toggle 
+100, | #Ground Speed
+100, | #Ground Accel 
+100, | #Ground Turning
+100, | #Jump Height
+100, | #Jump Speed 
+200, | #Lateral Air Speed 
+100, | #Air Accel 
+100, | #Landing Lag 
+100, | #Gravity 
+100, | #Dash Startup 
+100, | #Dash Landing Lag 
+100, | #Continuous Jump Height 
+100, | #Dash Duration 
+100, | #Dash Speed 
+0xFF  #Filler Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

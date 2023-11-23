@@ -23,8 +23,23 @@ Advisory: Use this set of
 legs when you want to make 
 difficult turns in the air."
 RoboBytes:
-* 0064C864 64640164
-* 64640101 320164FF
+byte [16] |
+0, | #Illegal Toggle 
+100, | #Ground Speed
+200, | #Ground Accel 
+100, | #Ground Turning
+100, | #Jump Height
+100, | #Jump Speed 
+1, | #Lateral Air Speed 
+100, | #Air Accel 
+100, | #Landing Lag 
+100, | #Gravity 
+1, | #Dash Startup 
+1, | #Dash Landing Lag 
+50, | #Continuous Jump Height 
+1, | #Dash Duration 
+100, | #Dash Speed 
+0xFF  #Filler Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

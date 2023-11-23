@@ -24,34 +24,131 @@ Blows target sideways.
 Advisory: Use it on opponents 
 who like to stay in the air."
 RoboBytes:
-* 00010078 785A0000
-* 00780000 0101000C
-* 003C0000 3F7D70A4
-* 3FB70A3D 3F0CCCCD
-* 003F0258 008C008C
-* 00140064 008C008C
-* 00640000 00000000
-* 01040000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 785A0000
-* 00780000 0101000A
-* 003C0000 3F7D70A4
-* 3F9AE148 3F0CCCCD
-* 003601A4 008C008C
-* 00140064 008C008C
-* 00640000 00000000
-* 00640000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* FFFFFFFF FFFFFFFF
-* FFFFFFFF FFFFFFFF
-* 0000003C 00000001
-* 00000000 00000000
-* 00000000 00000000
-* 00000000 00000000
-* 3F800000 DEADBEEF
+byte [2] |
+00, | #Illegal Toggle 
+1 #Number of Bombs Fired
+half [1] 120 #Explosion Trigger Radius
+#################
+## Ground Shot ##
+#################
+byte [2] |
+120, | #Starting location of reticle (% of distance to opponent) 
+90, #Reload 
+half [3] |
+0, | #Burrow Time 
+120, | #Projectile Speed 
+0x0000 #Empty Data? 
+byte [2] |
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+12, | #Explosion Expansion Radius 
+60, | #Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+0.99, | #Explosion Size after Initial Expansion 
+1.43, | #Final Explosion Size 
+0.55 #Explosion Height 
+half [10] |
+63, | #Damage 
+600, | #Down 
+140, | #Knockback Velocity 
+140, | #Knockback Angle 
+20, | #Histun 
+100, | #On Hit Gravity 
+140, | #Knockback Velocity (Downed) 
+140, | #Knockback Angle (Downed) 
+100, | #On Hit Gravity (Downed)
+0x0000 #Empty Data? 
+
+##### First Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+260, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Second Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Third Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Fourth Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+#################
+## Air Shot ##
+#################
+byte [2] |
+120, | #Starting location of reticle (% of distance to opponent) 
+90 #Reload 
+half [3] |
+0, | #Burrow Time 
+120, | #Projectile Speed 
+0x0000 #Empty Data? 
+byte [2] |
+1, | #Number of Explosions 
+1 #Delay between Explosions 
+half [3] |
+10, | #Explosion Expansion Radius 
+60, | #Lingering Hitbox Duration 
+0x0000 #Empty Data? 
+float [3] |
+0.99, | #Explosion Size after Initial Expansion 
+1.21, | #Final Explosion Size 
+0.55 #Explosion Height 
+half [10] |
+54, | #Damage 
+420, | #Down 
+140, | #Knockback Velocity 
+140, | #Knockback Angle 
+20, | #Histun 
+100, | #On Hit Gravity 
+140, | #Knockback Velocity (Downed) 
+140, | #Knockback Angle (Downed) 
+100, | #On Hit Gravity (Downed)
+0x0000 #Empty Data? 
+
+##### First Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+100, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Second Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Third Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+
+##### Fourth Ground Bomb #####
+half [4] |
+0, | #Left / Right Lnading Displacment 
+0, | #Front / Back Landing Displacment 
+0, | #Vertical Arc Angle 
+0 #Horizontal Arc Angle 
+word [14] 0x00000000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0000003C, 0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x3F800000 #Unknown Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000

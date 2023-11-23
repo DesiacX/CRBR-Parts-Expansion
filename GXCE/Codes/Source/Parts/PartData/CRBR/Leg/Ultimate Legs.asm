@@ -20,8 +20,23 @@ PartDescription:
 with an unknown living being. 
 Upgrades all abilities."
 RoboBytes:
-* 01C8C8C8 6464C8C8
-* 01640164 C864C8FF
+byte [16] |
+1, | #Illegal Toggle 
+200, | #Ground Speed
+200, | #Ground Accel 
+200, | #Ground Turning
+100, | #Jump Height
+100, | #Jump Speed 
+200, | #Lateral Air Speed 
+200, | #Air Accel 
+1, | #Landing Lag 
+100, | #Gravity 
+1, | #Dash Startup 
+100, | #Dash Landing Lag 
+200, | #Continuous Jump Height 
+100, | #Dash Duration 
+200, | #Dash Speed 
+0xFF  #Filler Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
 word [3] 0x20284352, 0x42522900, 0x00000000
