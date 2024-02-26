@@ -62,29 +62,29 @@ half [10] |
 
 ##### First Ground Bomb #####
 half [4] |
-300, | #Left / Right Lnading Displacment 
+300, | #Left / Right Landing Displacment 
 300, | #Front / Back Landing Displacment 
 100, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Second Ground Bomb #####
 half [4] |
-65236, | #Left / Right Lnading Displacment 
+-300, | #Left / Right Landing Displacment 
 300, | #Front / Back Landing Displacment 
 100, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Third Ground Bomb #####
 half [4] |
-300, | #Left / Right Lnading Displacment 
-65236, | #Front / Back Landing Displacment 
+300, | #Left / Right Landing Displacment 
+-300, | #Front / Back Landing Displacment 
 100, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Fourth Ground Bomb #####
 half [4] |
-65236, | #Left / Right Lnading Displacment 
-65236, | #Front / Back Landing Displacment 
+-300, | #Left / Right Landing Displacment 
+-300, | #Front / Back Landing Displacment 
 100, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 #################
@@ -122,29 +122,29 @@ half [10] |
 
 ##### First Ground Bomb #####
 half [4] |
-420, | #Left / Right Lnading Displacment 
+420, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 80, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Second Ground Bomb #####
 half [4] |
-65116, | #Left / Right Lnading Displacment 
+-420, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 80, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Third Ground Bomb #####
 half [4] |
-0, | #Left / Right Lnading Displacment 
+0, | #Left / Right Landing Displacment 
 420, | #Front / Back Landing Displacment 
 80, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Fourth Ground Bomb #####
 half [4] |
-0, | #Left / Right Lnading Displacment 
-65116, | #Front / Back Landing Displacment 
+0, | #Left / Right Landing Displacment 
+-420, | #Front / Back Landing Displacment 
 80, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 word [14] 0x00000000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0000003C, 0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x3F800000 #Unknown Data

@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Body Converter",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/GXCE/Converters/BodyConvert.py",
+            "console": "integratedTerminal",
+        },
+        {
             "name": "Pod Converter",
             "type": "python",
             "request": "launch",

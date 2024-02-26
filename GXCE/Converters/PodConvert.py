@@ -1,5 +1,6 @@
 import pyperclip
 import numpy as np
+import struct
 	 
 def hex_to_float(hex_string):
     try:
@@ -28,9 +29,9 @@ RBPodAngle = (int(("0x" + data[8:12]), 16))
 RBHorizontalExplodeRadius = (int(("0x" + data[12:16]), 16))
 RBVerticalExplodeRadius = (int(("0x" + data[16:20]), 16))
 RBFuseTime = (int(("0x" + data[20:24]), 16))
-RBGroundPodLaunchAngle = (int(("0x" + data[24:28]), 16))
+RBGroundPodLaunchAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[24:28]), 16)))))[0]
 EmptyDataB = "0x" + data[28:32]
-RBAirPodLaunchAngle = (int(("0x" + data[32:36]), 16))
+RBAirPodLaunchAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[32:36]), 16)))))[0]
 EmptyDataC = "0x" + data[36:40]
 
 RBHomingToggle = (int(("0x" + data[40:42]), 16))
@@ -46,14 +47,14 @@ RBVisionCone = (int(("0x" + data[64:68]), 16))
 RBLockOnRange = (int(("0x" + data[68:72]), 16))
 
 RBModeSwitchTime = (int(("0x" + data[72:76]), 16))
-RBGroundLaunchAngle = (int(("0x" + data[76:80]), 16))
-RBAirLaunchAngle = (int(("0x" + data[80:84]), 16))
+RBGroundLaunchAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[76:80]), 16)))))[0]
+RBAirLaunchAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[80:84]), 16)))))[0]
 RBGroundLaunchSpeed = (int(("0x" + data[84:88]), 16))
 RBAirLaunchSpeed = (int(("0x" + data[88:92]), 16))
 RBInitialGroundLaunchDuration = (int(("0x" + data[92:96]), 16))
 RBInitialAirLaunch = (int(("0x" + data[96:100]), 16))
 
-RBWallBounceAngle = (int(("0x" + data[100:102]), 16))
+RBWallBounceAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[100:102]), 16)))))[0]
 RBPodSize = (int(("0x" + data[102:104]), 16))
 RBExplosionCount = (int(("0x" + data[104:106]), 16))
 RBExplosionDelay = (int(("0x" + data[106:108]), 16))
@@ -69,11 +70,11 @@ RBExplosionHeight = hex_to_float(hex(int(data[136:144],16)))
 RBDamage = (int(("0x" + data[144:148]), 16))
 RBDown = (int(("0x" + data[148:152]), 16))
 RBKnockbackVelocity = (int(("0x" + data[152:156]), 16))
-RBKnockbackAngle = (int(("0x" + data[156:160]), 16))
+RBKnockbackAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[156:160]), 16)))))[0]
 RBHitstun = (int(("0x" + data[160:164]), 16))
 RBOnhitGravity = (int(("0x" + data[164:168]), 16))
 RBKnockbackVelocityDowned = (int(("0x" + data[168:172]), 16))
-RBKnockbackAngleDowned = (int(("0x" + data[172:176]), 16))
+RBKnockbackAngleDowned = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[172:176]), 16)))))[0]
 RBOnhitGravityDowned = (int(("0x" + data[176:180]), 16))
 EmptyDataF = "0x" + data[180:184]
 
@@ -155,4 +156,5 @@ DataOutput = \
     str(Filler6) + str(Filler7) + str(Filler8) + str(Filler9) + str(Filler10) + \
     str(Filler11) + str(Filler12) + str(Filler13) + str(Filler14) + \
     " #Unknown Data"
+print(DataOutput)
 pyperclip.copy(DataOutput)

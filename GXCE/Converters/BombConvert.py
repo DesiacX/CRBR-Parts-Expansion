@@ -1,5 +1,6 @@
 import pyperclip
 import numpy as np
+import struct
 	 
 def hex_to_float(hex_string):
     try:
@@ -38,7 +39,7 @@ RBGExplosionHeight = hex_to_float(hex(int(data[56:64],16)))
 RBGDamage = (int(("0x" + data[64:68]), 16))
 RBGDown = (int(("0x" + data[68:72]), 16))
 RBGKnockbackVelocity = (int(("0x" + data[72:76]), 16))
-RBGKnockbackAngle = (int(("0x" + data[76:80]), 16))
+RBGKnockbackAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[76:80]), 16)))))[0]
 RBGHitstun = (int(("0x" + data[80:84]), 16))
 RBGOnHitGravity = (int(("0x" + data[84:88]), 16))
 RBGKnockbackVelocityDowned = (int(("0x" + data[88:92]), 16))
@@ -46,25 +47,25 @@ RBGKnockbackAngleDowned = (int(("0x" + data[92:96]), 16))
 RBGOnHitGravityDowned = (int(("0x" + data[96:100]), 16))
 EmptyDataC = "0x" + data[100:104]
 
-RBG1LRDisplacement = (int(("0x" + data[104:108]), 16))
-RBG1FBDisplacement = (int(("0x" + data[108:112]), 16))
-RBG1VerticalArcAngle = (int(("0x" + data[112:116]), 16))
-RBG1HorizantalArcAngle = (int(("0x" + data[116:120]), 16))
+RBG1LRDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[104:108]), 16)))))[0]
+RBG1FBDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[108:112]), 16)))))[0]
+RBG1VerticalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[112:116]), 16)))))[0]
+RBG1HorizantalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[116:120]), 16)))))[0]
 
-RBG2LRDisplacement = (int(("0x" + data[120:124]), 16))
-RBG2FBDisplacement = (int(("0x" + data[124:128]), 16))
-RBG2VerticalArcAngle = (int(("0x" + data[128:132]), 16))
-RBG2HorizantalArcAngle = (int(("0x" + data[132:136]), 16))
+RBG2LRDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[120:124]), 16)))))[0]
+RBG2FBDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[124:128]), 16)))))[0]
+RBG2VerticalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[128:132]), 16)))))[0]
+RBG2HorizantalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[132:136]), 16)))))[0]
 
-RBG3LRDisplacement = (int(("0x" + data[136:140]), 16))
-RBG3FBDisplacement = (int(("0x" + data[140:144]), 16))
-RBG3VerticalArcAngle = (int(("0x" + data[144:148]), 16))
-RBG3HorizantalArcAngle = (int(("0x" + data[148:152]), 16))
+RBG3LRDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[136:140]), 16)))))[0]
+RBG3FBDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[140:144]), 16)))))[0]
+RBG3VerticalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[144:148]), 16)))))[0]
+RBG3HorizantalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[148:152]), 16)))))[0]
 
-RBG4LRDisplacement = (int(("0x" + data[152:156]), 16))
-RBG4FBDisplacement = (int(("0x" + data[156:160]), 16))
-RBG4VerticalArcAngle = (int(("0x" + data[160:164]), 16))
-RBG4HorizantalArcAngle = (int(("0x" + data[164:168]), 16))
+RBG4LRDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[152:156]), 16)))))[0]
+RBG4FBDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[156:160]), 16)))))[0]
+RBG4VerticalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[160:164]), 16)))))[0]
+RBG4HorizantalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[164:168]), 16)))))[0]
 
 RBAReticleStart = (int(("0x" + data[168:170]), 16))
 RBAReload = (int(("0x" + data[170:172]), 16))
@@ -82,7 +83,7 @@ RBAExplosionHeight = hex_to_float(hex(int(data[216:224],16)))
 RBADamage = (int(("0x" + data[224:228]), 16))
 RBADown = (int(("0x" + data[228:232]), 16))
 RBAKnockbackVelocity = (int(("0x" + data[232:236]), 16))
-RBAKnockbackAngle = (int(("0x" + data[236:240]), 16))
+RBAKnockbackAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[236:240]), 16)))))[0]
 RBAHitstun = (int(("0x" + data[240:244]), 16))
 RBAOnHitGravity = (int(("0x" + data[244:248]), 16))
 RBAKnockbackVelocityDowned = (int(("0x" + data[248:252]), 16))
@@ -90,25 +91,25 @@ RBAKnockbackAngleDowned = (int(("0x" + data[252:256]), 16))
 RBAOnHitGravityDowned = (int(("0x" + data[256:260]), 16))
 EmptyDataF = "0x" + data[260:264]
 
-RBA1LRDisplacement = (int(("0x" + data[264:268]), 16))
-RBA1FBDisplacement = (int(("0x" + data[268:272]), 16))
-RBA1VerticalArcAngle = (int(("0x" + data[272:276]), 16))
-RBA1HorizantalArcAngle = (int(("0x" + data[276:280]), 16))
+RBA1LRDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[264:268]), 16)))))[0]
+RBA1FBDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[268:272]), 16)))))[0]
+RBA1VerticalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[272:276]), 16)))))[0]
+RBA1HorizantalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[276:280]), 16)))))[0]
 
-RBA2LRDisplacement = (int(("0x" + data[280:284]), 16))
-RBA2FBDisplacement = (int(("0x" + data[284:288]), 16))
-RBA2VerticalArcAngle = (int(("0x" + data[288:292]), 16))
-RBA2HorizantalArcAngle = (int(("0x" + data[292:296]), 16))
+RBA2LRDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[280:284]), 16)))))[0]
+RBA2FBDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[284:288]), 16)))))[0]
+RBA2VerticalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[288:292]), 16)))))[0]
+RBA2HorizantalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[292:296]), 16)))))[0]
 
-RBA3LRDisplacement = (int(("0x" + data[296:300]), 16))
-RBA3FBDisplacement = (int(("0x" + data[300:304]), 16))
-RBA3VerticalArcAngle = (int(("0x" + data[304:308]), 16))
-RBA3HorizantalArcAngle = (int(("0x" + data[308:312]), 16))
+RBA3LRDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[296:300]), 16)))))[0]
+RBA3FBDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[300:304]), 16)))))[0]
+RBA3VerticalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[304:308]), 16)))))[0]
+RBA3HorizantalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[308:312]), 16)))))[0]
 
-RBA4LRDisplacement = (int(("0x" + data[312:316]), 16))
-RBA4FBDisplacement = (int(("0x" + data[316:320]), 16))
-RBA4VerticalArcAngle = (int(("0x" + data[320:324]), 16))
-RBA4HorizantalArcAngle = (int(("0x" + data[324:328]), 16))
+RBA4LRDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[312:316]), 16)))))[0]
+RBA4FBDisplacement = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[316:320]), 16)))))[0]
+RBA4VerticalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[320:324]), 16)))))[0]
+RBA4HorizantalArcAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[324:328]), 16)))))[0]
 
 Filler1 = (("0x" + data[328:336]))
 Filler2 = ((", 0x" + data[336:344]))
@@ -162,25 +163,25 @@ DataOutput = \
     str(EmptyDataC) + " #Empty Data? \n" + \
     "\n##### First Ground Bomb #####\n" + \
     "half [4] |\n" + \
-    str(RBG1LRDisplacement) + ", | #Left / Right Lnading Displacment \n" + \
+    str(RBG1LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBG1FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBG1VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBG1HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \
     "\n##### Second Ground Bomb #####\n" + \
     "half [4] |\n" + \
-    str(RBG2LRDisplacement) + ", | #Left / Right Lnading Displacment \n" + \
+    str(RBG2LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBG2FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBG2VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBG2HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \
     "\n##### Third Ground Bomb #####\n" + \
     "half [4] |\n" + \
-    str(RBG3LRDisplacement) + ", | #Left / Right Lnading Displacment \n" + \
+    str(RBG3LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBG3FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBG3VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBG3HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \
     "\n##### Fourth Ground Bomb #####\n" + \
     "half [4] |\n" + \
-    str(RBG4LRDisplacement) + ", | #Left / Right Lnading Displacment \n" + \
+    str(RBG4LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBG4FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBG4VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBG4HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \
@@ -216,25 +217,25 @@ DataOutput = \
     str(EmptyDataF) + " #Empty Data? \n" + \
     "\n##### First Ground Bomb #####\n" + \
     "half [4] |\n" + \
-    str(RBA1LRDisplacement) + ", | #Left / Right Lnading Displacment \n" + \
+    str(RBA1LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBA1FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBA1VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBA1HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \
     "\n##### Second Ground Bomb #####\n" + \
     "half [4] |\n" + \
-    str(RBA2LRDisplacement) + ", | #Left / Right Lnading Displacment \n" + \
+    str(RBA2LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBA2FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBA2VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBA2HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \
     "\n##### Third Ground Bomb #####\n" + \
     "half [4] |\n" + \
-    str(RBA3LRDisplacement) + ", | #Left / Right Lnading Displacment \n" + \
+    str(RBA3LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBA3FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBA3VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBA3HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \
     "\n##### Fourth Ground Bomb #####\n" + \
     "half [4] |\n" + \
-    str(RBA4LRDisplacement) + ", | #Left / Right Lnading Displacment \n" + \
+    str(RBA4LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBA4FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBA4VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBA4HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \

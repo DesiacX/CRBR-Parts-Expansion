@@ -67,7 +67,7 @@ half [10] |
 ##### First Ground Bomb #####
 half [4] |
 200, | #Left / Right Lnading Displacment 
-65386, | #Front / Back Landing Displacment 
+-150, | #Front / Back Landing Displacment 
 110, | #Vertical Arc Angle 
 150 #Horizontal Arc Angle 
 
@@ -126,10 +126,10 @@ half [10] |
 
 ##### First Ground Bomb #####
 half [4] |
-65336, | #Left / Right Lnading Displacment 
-65386, | #Front / Back Landing Displacment 
+-200, | #Left / Right Lnading Displacment 
+-150, | #Front / Back Landing Displacment 
 110, | #Vertical Arc Angle 
-65386 #Horizontal Arc Angle 
+-150 #Horizontal Arc Angle 
 
 ##### Second Ground Bomb #####
 half [4] |

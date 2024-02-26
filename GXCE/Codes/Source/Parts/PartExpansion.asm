@@ -2749,7 +2749,7 @@ HOOK @ $80107284
 }
 HOOK @ $80107290
 {
-%SetPartLoc(r9, PodPartLoc)
+%SetPartLoc(r9, LegPartLoc)
 }
 
 ###########################

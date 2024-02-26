@@ -67,28 +67,28 @@ half [10] |
 
 ##### First Ground Bomb #####
 half [4] |
-0, | #Left / Right Lnading Displacment 
+0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 100, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Second Ground Bomb #####
 half [4] |
-0, | #Left / Right Lnading Displacment 
+0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 0, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Third Ground Bomb #####
 half [4] |
-0, | #Left / Right Lnading Displacment 
+0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 0, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Fourth Ground Bomb #####
 half [4] |
-0, | #Left / Right Lnading Displacment 
+0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 0, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
@@ -127,28 +127,28 @@ half [10] |
 
 ##### First Ground Bomb #####
 half [4] |
-0, | #Left / Right Lnading Displacment 
+0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 0, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Second Ground Bomb #####
 half [4] |
-0, | #Left / Right Lnading Displacment 
+0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 0, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Third Ground Bomb #####
 half [4] |
-0, | #Left / Right Lnading Displacment 
+0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 0, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
 ##### Fourth Ground Bomb #####
 half [4] |
-0, | #Left / Right Lnading Displacment 
+0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 0, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 

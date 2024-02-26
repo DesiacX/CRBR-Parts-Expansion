@@ -54,7 +54,7 @@ half [13] |
 0, | #Lock On Range 
 0, | #Duration of pause for switching between roaming and locked on. 
 0, | #Initial Ground Launch Angle 
-65506, | #Initial Air Launch Angle 
+-30, | #Initial Air Launch Angle 
 233, | #Initial Ground Launch Speed 
 233, | #Initial Air Launch Speed 
 15, | #Initial Ground Launch Duration 
