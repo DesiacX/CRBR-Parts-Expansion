@@ -12,6 +12,13 @@
             "console": "integratedTerminal",
         },
         {
+            "name": "Gun Converter",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/GXCE/Converters/GunConvert.py",
+            "console": "integratedTerminal",
+        },
+        {
             "name": "Pod Converter",
             "type": "python",
             "request": "launch",
