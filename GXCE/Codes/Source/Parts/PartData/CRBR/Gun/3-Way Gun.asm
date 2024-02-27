@@ -11,9 +11,13 @@
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
 "3-Way Gun (CRBR)"
+BuildTitle:
+    String|
+" (CRBR)"
 PartDescription:
     String|
 "Fires three rounds in three 
@@ -300,7 +304,6 @@ half[9] |
 
 ExtraBytes:
 byte [5] 6, 6, 4, 6, 4   #Stat Line
-word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

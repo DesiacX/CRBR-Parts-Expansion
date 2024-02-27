@@ -11,9 +11,13 @@ Booster Legs [Custom Robo Battle Revolution]
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
 "Booster Legs (CRBR)"
+BuildTitle:
+    String|
+" (CRBR)"
 PartDescription:
     String|
 "Increases dash speed. 
@@ -41,7 +45,6 @@ byte [16] |
 0xFF  #Filler Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
-word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

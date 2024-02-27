@@ -11,9 +11,13 @@ Claw Gun [Custom Robo Battle Revolution]
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
 "Claw Gun (CRBR)"
+BuildTitle:
+    String|
+" (CRBR)"
 PartDescription:
     String|
 "Repeatedly fires shots that 
@@ -300,7 +304,6 @@ half[9] |
 0 #On-Hit Gravity (Downed)
 ExtraBytes:
 byte [5] 2, 6, 10, 8, 2   #Stat Line
-word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

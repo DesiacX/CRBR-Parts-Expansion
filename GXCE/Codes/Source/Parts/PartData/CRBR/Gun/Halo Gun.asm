@@ -11,9 +11,13 @@ Halo Gun [Custom Robo Battle Revolution]
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
 "Halo Gun (CRBR)"
+BuildTitle:
+    String|
+" (CRBR)"
 PartDescription:
     String|
 "Fires a large homing round. 
@@ -300,7 +304,6 @@ half[9] |
 90 #On-Hit Gravity (Downed)
 ExtraBytes:
 byte [5] 6, 6, 8, 6, 6   #Stat Line
-word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

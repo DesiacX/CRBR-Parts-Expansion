@@ -11,9 +11,13 @@ Seeker Pod G [Custom Robo Battle Revolution]
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
 "Seeker Pod G (CRBR)"
+BuildTitle:
+    String|
+" (CRBR)"
 PartDescription:
     String|
 "Slowly chases your opponent. 
@@ -84,7 +88,6 @@ word [14] 0x00000000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0000003C
 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x3F800000 #Unknown Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
-word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

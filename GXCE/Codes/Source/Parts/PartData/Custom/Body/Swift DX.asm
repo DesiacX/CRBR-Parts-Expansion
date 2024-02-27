@@ -11,9 +11,13 @@ Swift DX [DesiacX]
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
-"Switft DX (DXE)"
+"Swift DX (DXE)"
+BuildTitle:
+    String|
+" (DXE)"
 PartDescription:
     String|
 "An experimental custom part.
@@ -118,7 +122,6 @@ half [16] |
 ExtraBytes:
 byte [5] 4, 2, 8, 5, 6   #Stat Line
 byte [1] 2  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
-word [3] 0x20284458, 0x45290000, 0x00000000 #Build Code
 MASTERCODE:
 PULSE
 {

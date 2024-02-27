@@ -11,9 +11,13 @@ Plus One Legs S [CRBR Parts Expansion, de, DesiacX]
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
 "Plus One Legs S (DXE)"
+BuildTitle:
+    String|
+" (DXE)"
 PartDescription:
     String|
 "A variant of the Standard
@@ -42,7 +46,6 @@ byte [16] |
 0xFF #Filler Data
 ExtraBytes:
 byte [5] 10, 10, 2, 10, 10   #Stat Line
-word [3] 0x20284458, 0x45290000, 0x00000000 #Build Code
 MASTERCODE:
 PULSE
 {

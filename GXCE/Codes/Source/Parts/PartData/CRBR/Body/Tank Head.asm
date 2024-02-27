@@ -11,9 +11,13 @@ Tank Head [Custom Robo Battle Revolution]
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
 "Tank Head (CRBR)"
+BuildTitle:
+    String|
+" (CRBR)"
 PartDescription:
     String|
 "A Funky Big Head model. 
@@ -119,7 +123,6 @@ half [16] |
 ExtraBytes:
 byte [5] 7, 8, 3, 10, 8   #Stat Line
 byte [1] 3  #Body Type. 0 = Normal. 1 = Armor. 2 = Speed. 3 = Other. 4 = Nothing.
-word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

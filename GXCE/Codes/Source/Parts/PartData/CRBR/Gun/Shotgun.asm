@@ -11,9 +11,13 @@ Shotgun Gun [Custom Robo Battle Revolution]
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
 "Shotgun (CRBR)"
+BuildTitle:
+    String|
+" (CRBR)"
 PartDescription:
     String|
 "Fires three short, yet powerful 
@@ -298,7 +302,6 @@ half[9] |
 0 #On-Hit Gravity (Downed)
 ExtraBytes:
 byte [5] 10, 10, 2, 2, 10   #Stat Line
-word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

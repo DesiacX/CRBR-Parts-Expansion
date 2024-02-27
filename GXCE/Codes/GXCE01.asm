@@ -289,10 +289,10 @@ restore:
 }
 
 ###################################
-Extra Bytes - Build Title [DesiacX]
+Extra Bytes - Build Title V2 [DesiacX]
 ###################################
 .alias LocLow = 0x8023
-.alias DataLocBodyHigh = 0xBD68
+.alias DataLocTitleHigh = 0xBD50
 op nop @ $800F8C94  #Redundant Reload of r4
 HOOK @ $800F8C88
 #r25, 27, 28, 30, and 31 are free.
@@ -307,31 +307,32 @@ HOOK @ $800F8C88
   mulli r25, r25, 0x4
   mulli r27, r27, 0x4
   lis r28, LocLow
-  ori r28, r28, DataLocBodyHigh
+  ori r28, r28, DataLocTitleHigh
   add r28, r27, r28
   lwz r28, 0 (r28)  #Load into Part Array
   add r28, r25, r28
   lwz r28, 0 (r28)  #Load into Part
+  lhz r27, -0x6 (r28) #Load Offset to Build Title
 Body:
   cmpwi r31, 0
   bne- Gun
-  addi r4, r28, 0xFE
+  add r4, r27, r28  #Set Build Title
 Gun:
   cmpwi r31, 1
   bne- Bomb
-  addi r4, r28, 0x1F5
+  add r4, r28, r27
 Bomb:
   cmpwi r31, 2
   bne- Pod
-  addi r4, r28, 0xE5
+  add r4, r28, r27
 Pod:
   cmpwi r31, 3
   bne- Leg
-  addi r4, r28, 0x9D
+  add r4, r28, r27
 Leg:
   cmpwi r31, 4
   bne- restore
-  addi r4, r28, 0x15
+  add r4, r28, r27
 restore:
   li r25, 0 #hook point.
 }

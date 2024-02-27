@@ -11,9 +11,13 @@ Reflection Pod [Custom Robo Battle Revolution]
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
 "Reflection Pod (CRBR)"
+BuildTitle:
+    String|
+" (CRBR)"
 PartDescription:
     String|
 "Doesn't chase your opponent, 
@@ -87,7 +91,6 @@ word [14] 0x00000001, 0xFFFFFF7F, 0x7FFF7FFF, 0xFFFFFF7F, 0xFFFFFFFF, 0x0000000A
 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x3E4CCCCD #Unknown Data
 ExtraBytes:
 byte [5] 5, 5, 5, 5, 5   #Stat Line
-word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

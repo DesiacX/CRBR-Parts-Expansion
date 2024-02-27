@@ -11,9 +11,13 @@ Needle Gun [Custom Robo Battle Revolution]
     .BA<-RoboBytes
     .BA->$8023BCF8
     .GOTO->MASTERCODE
+    .BA<-BuildTitle
 PartName:
     String|
 "Needle Gun (CRBR)"
+BuildTitle:
+    String|
+" (CRBR)"
 PartDescription:
     String|
 "Fires three vertical, 
@@ -298,7 +302,6 @@ half[9] |
 0 #On-Hit Gravity (Downed)
 ExtraBytes:
 byte [5] 4, 6, 2, 8, 8   #Stat Line
-word [3] 0x20284352, 0x42522900, 0x00000000
 MASTERCODE:
 PULSE
 {

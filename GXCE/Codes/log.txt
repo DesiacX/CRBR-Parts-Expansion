@@ -9,7 +9,7 @@ HP Defaults to 70 for Tag Battles in V.S. Mode V2 [DesiacX]
 Temporarily Disable Illegal Parts by holding R [DesiacX]
 Remember Parts Selection [DesiacX]
 Extra Bytes - Body Type [DesiacX]
-Extra Bytes - Build Title [DesiacX]
+Extra Bytes - Build Title V2 [DesiacX]
 Extra Bytes - Stat Lines [DesiacX]
 Source/Extras/ZAltStages.asm
 	Stage Striking v1.1 [DesiacX]
