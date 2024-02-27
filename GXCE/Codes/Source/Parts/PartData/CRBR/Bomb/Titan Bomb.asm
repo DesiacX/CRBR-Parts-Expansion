@@ -122,28 +122,28 @@ half [10] |
 100, | #On Hit Gravity (Downed)
 0x0000 #Empty Data? 
 
-##### First Ground Bomb #####
+##### First Air Bomb #####
 half [4] |
 0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 150, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
-##### Second Ground Bomb #####
+##### Second Air Bomb #####
 half [4] |
 0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 0, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
-##### Third Ground Bomb #####
+##### Third Air Bomb #####
 half [4] |
 0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 
 0, | #Vertical Arc Angle 
 0 #Horizontal Arc Angle 
 
-##### Fourth Ground Bomb #####
+##### Fourth Air Bomb #####
 half [4] |
 0, | #Left / Right Landing Displacment 
 0, | #Front / Back Landing Displacment 

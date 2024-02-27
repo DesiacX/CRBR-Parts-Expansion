@@ -215,25 +215,25 @@ DataOutput = \
     str(RBAKnockbackAngleDowned) + ", | #Knockback Angle (Downed) \n" + \
     str(RBAOnHitGravityDowned) + ", | #On Hit Gravity (Downed)\n" + \
     str(EmptyDataF) + " #Empty Data? \n" + \
-    "\n##### First Ground Bomb #####\n" + \
+    "\n##### First Air Bomb #####\n" + \
     "half [4] |\n" + \
     str(RBA1LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBA1FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBA1VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBA1HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \
-    "\n##### Second Ground Bomb #####\n" + \
+    "\n##### Second Air Bomb #####\n" + \
     "half [4] |\n" + \
     str(RBA2LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBA2FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBA2VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBA2HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \
-    "\n##### Third Ground Bomb #####\n" + \
+    "\n##### Third Air Bomb #####\n" + \
     "half [4] |\n" + \
     str(RBA3LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBA3FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
     str(RBA3VerticalArcAngle) + ", | #Vertical Arc Angle \n" + \
     str(RBA3HorizantalArcAngle) + " #Horizontal Arc Angle \n" + \
-    "\n##### Fourth Ground Bomb #####\n" + \
+    "\n##### Fourth Air Bomb #####\n" + \
     "half [4] |\n" + \
     str(RBA4LRDisplacement) + ", | #Left / Right Landing Displacment \n" + \
     str(RBA4FBDisplacement) + ", | #Front / Back Landing Displacment \n" + \
