@@ -135,9 +135,9 @@ RBChargeARecoveryPhaseSpeed = (int(("0x" + data[328:332]), 16))
 RBChargeAStartupPhaseAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[332:336]), 16)))))[0]
 RBChargeAAttackPhaseAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[336:340]), 16)))))[0]
 RBChargeARecoveryPhaseAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[340:344]), 16)))))[0]
-RBChargeAHitboxSizeA = (int(("0x" + data[344:348]), 16))
-RBChargeAHitboxSizeB = (int(("0x" + data[348:352]), 16))
-RBChargeAHitboxSizeC = (int(("0x" + data[352:356]), 16))
+RBChargeAHitboxSizeA = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[344:348]), 16)))))[0]
+RBChargeAHitboxSizeB = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[348:352]), 16)))))[0]
+RBChargeAHitboxSizeC = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[352:356]), 16)))))[0]
 
 # ChargeB
 ChargeBWord1 = ("0x" + data[356:364])
@@ -165,9 +165,9 @@ RBChargeBRecoveryPhaseSpeed = (int(("0x" + data[460:464]), 16))
 RBChargeBStartupPhaseAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[464:468]), 16)))))[0]
 RBChargeBAttackPhaseAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[468:472]), 16)))))[0]
 RBChargeBRecoveryPhaseAngle = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[476:480]), 16)))))[0]
-RBChargeBHitboxSizeA = (int(("0x" + data[476:480]), 16))
-RBChargeBHitboxSizeB = (int(("0x" + data[480:484]), 16))
-RBChargeBHitboxSizeC = (int(("0x" + data[484:488]), 16))
+RBChargeBHitboxSizeA = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[476:480]), 16)))))[0]
+RBChargeBHitboxSizeB = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[480:484]), 16)))))[0]
+RBChargeBHitboxSizeC = struct.unpack('>h', (struct.pack('>H', (int(("0x" + data[484:488]), 16)))))[0]
 
 DataOutput = \
     "half[1] |\n" + \
