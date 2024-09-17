@@ -1540,9 +1540,9 @@ Load:
 }
 op b 0x0C @ $80066844
 
-###########################
-Robobytes Control [DesiacX]
-###########################
+##############################
+Robobytes Control V2 [DesiacX]
+##############################
 .alias LocLow = 0x8023
 .alias DataLocBodyHigh = 0xBD68
 .alias DataLocGunHigh = DataLocBodyHigh + 4
@@ -1552,18 +1552,21 @@ Robobytes Control [DesiacX]
 * 061C0A88 0000000A
 * 00FF00FF 00FF00FF
 * 00FF00FF 00FF00FF
-#Data Data Copy
+#Data Copy
 #r0 = Ammount of Data to Copy
 #r4 = Copy Clobbering Register
 #r5 = Copy From Location
 #r6 = Copy To Location
-#r7 = Robo ID
+#r7 = Part ID
 #r8 = Player ID
-#r4 / r22 = Free Realestate
-#Update: r22 is not free realestate. r8 had the player controller slot, so in tag, it'd go 0 0 1 1 instead of 0 1 2 3. r22 had the correct slot for this code. 
-op nop @ $80005F34
-HOOK @ $80005f30
+#r22 = Slot ID, use this
+
+HOOK @ $80005F40
 {
+    mfctr r4
+    cmpwi r4, 0x3D
+    bne CopyData
+ChangeLoc:
     lis r7, 0x8040
     ori r7, r7, 0x7260    #Setup Player Locations
     li r4, 0x4994
@@ -1575,18 +1578,18 @@ HOOK @ $80005f30
     lwz r22, 0 (r22)
     mulli r4, r7, 0x4
     lwzx r5, r4, r22        #Load Data Location into r5
-    li r0, 0x3D             #Original Copy Ammount was 4D. 
-    addi r6, r6, 0x40       #Do not copy Name Data.
-
-    lwz r22, -0x05074 (r13) #Make this register Free Realestate by performing an earlier op.
-    lwz r4, -0x5078 (r13)
-    lbz r8, 0x008D (r4) #Make this register Free Realestate by performing an earlier op.
+    subi r5, r5, 0x2
+    lwz r22, -0x05074 (r13) #Reload Slot ID
+CopyData:
+    lhz r4, 0x2 (r5) #Original Op, Loads first half of data
 }
 
-op nop @ $80005F74
-op nop @ $80005F78
-HOOK @ $80005f70
+HOOK @ $80005F80
 {
+    mfctr r4
+    cmpwi r4, 0x3D
+    bne CopyData
+ChangeLoc:
     lis r7, 0x8040
     ori r7, r7, 0x7260    #Setup Player Locations
     li r4, 0x4994
@@ -1599,16 +1602,17 @@ HOOK @ $80005f70
     mulli r4, r7, 0x4
     lwzx r5, r4, r22        #Load Data Location into r5
     subi r5, r5, 0x4
-    li r0, 0x41             #Original Copy Ammount was 0x51. 
-    addi r6, r6, 0xA0       #Do not copy Name Data.
-
-    lwz r22, -0x05074 (r13) #Make this register Free Realestate by performing an earlier op.
-    lwz r4, -0x5078 (r13)
-    lbz r8, 0x008D (r4) #Make this register Free Realestate by performing an earlier op.
+    lwz r22, -0x05074 (r13) #Reload Slot ID
+CopyData:
+    lwz r4, 0x4 (r5) #Original Op
 }
 
-HOOK @ $80005fBC
+HOOK @ $80005FC8
 {
+    mfctr r4
+    cmpwi r4, 0x1B
+    bne CopyData
+ChangeLoc:
     lis r7, 0x8040
     ori r7, r7, 0x7260    #Setup Player Locations
     li r4, 0x4994
@@ -1620,23 +1624,18 @@ HOOK @ $80005fBC
     lwz r22, 0 (r22)
     mulli r4, r7, 0x4
     lwzx r5, r4, r22        #Load Data Location into r5
-    li r0, 0x1B             #Original Copy Ammount was 0x2F. 
-    addi r6, r6, 0xA0       #Do not copy Name Data.
-
-    lwz r22, -0x05074 (r13) #Make this register Free Realestate by performing an earlier op.
-    lwz r4, -0x5078 (r13)
-    lbz r8, 0x008D (r4) #Make this register Free Realestate by performing an earlier op.
+    subi r5, r5, 0x4
+    lwz r22, -0x05074 (r13) #Reload Slot ID
+CopyData:
+    lwz r4, 0x4 (r5) #Original Op    
 }
 
-
-#Different for Pods and Legs
-#r3 = Copy From Location
-#r4 = Copy From Location
-#r5 = Copy To Location
-op nop @ $80006004
-HOOK @ $80006000
+HOOK @ $80006010
 {
-    subi r5, r3, 0x1D1C
+    mfctr r3
+    cmpwi r3, 0x12
+    bne CopyData
+ChangeLoc:
     lis r4, 0x8040
     ori r4, r4, 0x7260    #Setup Player Locations
     li r3, 0x4994
@@ -1647,36 +1646,35 @@ HOOK @ $80006000
     ori r22, r22, DataLocPodHigh
     lwz r22, 0 (r22)
     mulli r3, r4, 0x4
-    lwzx r4, r3, r22        #Load Data Location into r5
-    li r0, 0x1C             #Original Copy Ammount was 0x2F. 
-    addi r5, r5, 0xE0       #Do not copy Name Data.
-
-    lwz r22, -0x05074 (r13) #Make this register Free Realestate by performing an earlier op.
-    #lwz r4, -0x5078 (r13)
-    #lbz r8, 0x008D (r4) #Make this register Free Realestate by performing an earlier op.
+    lwzx r4, r3, r22        #Load Data Location into r4
+    subi r4, r4, 0x4
+    lwz r22, -0x05074 (r13) #Reload Slot ID
+CopyData:
+    lwz r3, 0x4 (r4) #Original Op    
 }
 
-HOOK @ $8000604C
+HOOK @ $80006058
 {
+    mfctr r3
+    cmpwi r3, 0x07
+    bne CopyData
+ChangeLoc:
     lis r4, 0x8040
     ori r4, r4, 0x7260    #Setup Player Locations
     li r3, 0x4994
     mullw r3, r3, r22        
     add r4, r3, r4        #Get specific Player Location
-    lbz r4, 0x485F (r4)    #Load Pod Physical Slot ID
+    lbz r4, 0x485F (r4)    #Load Leg Physical Slot ID
     lis r22, LocLow
     ori r22, r22, DataLocLegHigh
     lwz r22, 0 (r22)
     mulli r3, r4, 0x4
     lwzx r4, r3, r22        #Load Data Location into r5
-    li r0, 0x7             #Original Copy Ammount was 0x47. 
-    addi r5, r5, 0x80       #Do not copy Name Data.
-
-    lwz r22, -0x05074 (r13) #Make this register Free Realestate by performing an earlier op.
-    #lwz r4, -0x5078 (r13)
-    #lbz r8, 0x008D (r4) #Make this register Free Realestate by performing an earlier op.
+    subi r4, r4, 0x1
+    lwz r22, -0x05074 (r13) #Reload Slot ID
+CopyData:
+    lbz r3, 0x1 (r4) #Original Op    
 }
-
 
 ###########################
 Part Expansion V2 [DesiacX]
